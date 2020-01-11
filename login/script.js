@@ -12,6 +12,10 @@ function account_settings()
  var zip=document.getElementById("zip").value; 
  var bandera = false;     
  var phoneno = /^\d{12}$/;
+     var rootRef = firebase.database().ref().child("Users");
+     var userID = firebase.auth().currentUser.uid;
+     var usersRef = rootRef.child(userID);
+ 
 console.log(phone);
 if(first_name=='' || first_name.length<4 || first_name.length>25 )
 {
@@ -82,6 +86,37 @@ console.log(country);
  if(bandera==true)
     {
     alert("Se envia");
+ var userData = 
+     {
+       "firstName":first_name,
+       "LastName":last_name,
+      "phone": phone,
+      "country": country,
+      "state": state ,
+      "address": address,
+      "city": city ,
+      "zip": zip ,
+      
+     
+     };
+    
+            usersRef.set(userData, function(error)
+              {
+                if(error)
+                {
+                     var errorCode = error.code;
+                     var errorMessage = error.message;
+                     console.log(errorCode);
+                     console.log(errorMessage);
+
+                     window.alert("Message :" + errorMessage);
+                }
+                else
+                {
+                       window.location.href="home.html";
+                }
+              });
+     
     }
  
 } 
