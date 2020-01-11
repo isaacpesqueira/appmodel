@@ -25,7 +25,7 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
                          }
                         else
                         {
-                                if(phone=='' || phone.length<8 || phone.length>15 || (!phone.match(phoneno)) )
+                                if(!phone.match(phoneno))
                                 {
                                  window.alert("capture the phone");
                                  }
