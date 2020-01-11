@@ -41,7 +41,7 @@
 <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <label class="col-md-4 control-label">First Name</label>  
-  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+  <input id="first_name"  name="first_name" placeholder="First Name" class="form-control"  type="text">
     </div>
   </div>
 
@@ -54,7 +54,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
  
-  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+  <input id="last_name" name="last_name" placeholder="Last Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -68,7 +68,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
       
-  <input name="phone" placeholder="(845)555-1212" class="form-control" type="tel">
+  <input name="phone"  id="phone" placeholder="(845)555-1212" class="form-control" type="tel">
     </div>
   </div>
 </div>
@@ -77,7 +77,7 @@
   <label class="col-md-4 control-label">Country</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-<select name="pais" id=pais>
+<select name="pais" id="pais">
 <option value="Select" id="sin">Select County</option>
 <option value="Afganistán" id="AF">Afganistán</option>
 <option value="Albania" id="AL">Albania</option>
@@ -328,7 +328,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
       
-  <input name="address" placeholder="Address" class="form-control" type="text">
+  <input id="address" name="address" placeholder="Address" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -340,7 +340,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
  
-  <input name="state"id="state" placeholder="State" class="form-control"  type="text">
+  <input name="state" id="state" placeholder="State" class="form-control"  type="text">
     </div>
 </div>
 </div> 
@@ -362,14 +362,14 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
      
-  <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+  <input name="zip" id="zip" placeholder="Zip Code" class="form-control"  type="text">
     </div>
 </div>
 </div>
 
                          
                      
-  <center>  <button type="submit" class="btn signup" >Finish ! </button> </center>
+  <center>  <button type="submit" class="btn signup" onclick="account_settings()" >Finish ! </button> </center>
     </div>
                     
 
