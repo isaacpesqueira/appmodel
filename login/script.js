@@ -25,7 +25,7 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
                          }
                         else
                         {
-                                if(phone='')
+                              if (!(phoneno.test(phone))) 
                                 {
                                  window.alert("capture the phone");
                                  }
@@ -59,7 +59,7 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
 
                                                                         if (!(ercp.test(zip))) 
                                                                         {
-                                                                      window.alert("capture the address");
+                                                                      window.alert("capture the zip");
                                                                        }
                                                                         else
                                                                         {
