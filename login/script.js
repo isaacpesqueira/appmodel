@@ -11,7 +11,7 @@ function account_settings()
  var phone=document.getElementById("phone").value; 
  var zip=document.getElementById("zip").value; 
  var bandera = false;     
- var phoneno = /^\d{10}$/;
+ var phoneno = /^\d{12}$/;
 
 if(first_name=='' || first_name.length<4 || first_name.length>25 )
 {
