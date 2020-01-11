@@ -1,3 +1,9 @@
+function logout()
+{
+ firebase.auth().signOut();
+ 
+} 
+
 function login()
 {
  var password=document.getElementById("pass").value; 
