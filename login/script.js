@@ -47,9 +47,24 @@ function create()
   if(retype==password  )
      {
    
+      var result = firebase.auth().createUserWithEmailAndPassword(email,password);
+         
+      result.catch(function(error)
+      { var errorCode = error.code;
+       var errorMessage = error.message;
+       console.log(errorCode);
+       console.log(errorMessage);
+       window.alert("Message: "+errorMessage);
        
-   document.getElementById("signup").innerHTML="processing";    
-     
+       });
+      else
+      {
+     document.getElementById("signup").innerHTML="processing";    
+       
+      }
+      
+      
+      
      }
   else
     {
