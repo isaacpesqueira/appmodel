@@ -57,11 +57,10 @@ function create()
        window.alert("Message: "+errorMessage);
        
        });
-      else
-      {
+ 
      document.getElementById("signup").innerHTML="processing";    
        
-      }
+  
       
       
       
