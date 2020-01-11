@@ -49,7 +49,7 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
                                                       }
                                                           else
                                                           {
-                                                                  if(address=='' || address.length<6 || address.length>45)
+                                                                  if(address=='' || address.length<6 || address.length>55)
                                                                    {
                                                                       window.alert("capture the address");
                                                                     }
