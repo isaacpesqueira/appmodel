@@ -1,3 +1,10 @@
+function generateHexString(length) {
+  var ret = "";
+  while (ret.length < length) {
+    ret += Math.random().toString(16).substring(2);
+  }
+  return ret.substring(0,length);
+}
 
 function account_settings()
 {
@@ -81,7 +88,7 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
  }
 
 
- 
+ var api_key= generateHexString(41);
 console.log(country);
  if(bandera==true)
     {
@@ -96,6 +103,7 @@ console.log(country);
       "address": address,
       "city": city ,
       "zip": zip ,
+      "api_key": api_key,
       
      
      };
