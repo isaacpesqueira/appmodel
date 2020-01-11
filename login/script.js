@@ -76,10 +76,7 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
   
  }
  
- if(bandera==true)
-    {
-    alert("Se envia");
-    
+
     }
  
 } 
