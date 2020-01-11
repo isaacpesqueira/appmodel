@@ -1,7 +1,7 @@
 
 function account_settings()
 {
- var fist_name=document.getElementById("fist_name").value; 
+ var fist_name=document.getElementById("first_name").value; 
  var last_name=document.getElementById("last_name").value; 
  var phone=document.getElementById("phone").value; 
  var country=document.getElementById("pais").value; 
