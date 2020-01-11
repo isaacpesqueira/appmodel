@@ -12,7 +12,7 @@ function account_settings()
  var zip=document.getElementById("zip").value; 
  var bandera = false;     
  var phoneno = /^\d{12}$/;
-
+console.log(phone);
 if(first_name=='' || first_name.length<4 || first_name.length>25 )
 {
  window.alert("capture the first name");
@@ -25,7 +25,7 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
                          }
                         else
                         {
-                                if((!phone.match(phoneno)))
+                                if(phone='' || (!phone.length==12) )
                                 {
                                  window.alert("capture the phone");
                                  }
