@@ -49,13 +49,13 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
                                                       }
                                                           else
                                                           {
-                                                                  if(address=='' || address.length<3 || address.length>12)
+                                                                  if(address=='' || address.length<7 || address.length>37)
                                                                    {
                                                                       window.alert("capture the address");
                                                                     }
                                                                     else
                                                                     {
-                                                                      var ercp=/(^([0-9]{5,5})|^)$/;
+                                                                      var ercp=/(^([0-9]{1,5})|^)$/;
 
                                                                         if (!(ercp.test(zip))) 
                                                                         {
