@@ -75,7 +75,7 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
  }
   
  }
- 
+}
 
  
 console.log(country);
