@@ -1,7 +1,7 @@
 
 function account_settings()
 {
- var fist_name=document.getElementById("first_name").value; 
+ var first_name=document.getElementById("first_name").value; 
  var last_name=document.getElementById("last_name").value; 
  var phone=document.getElementById("phone").value; 
  var country=document.getElementById("pais").value; 
@@ -9,9 +9,10 @@ function account_settings()
  var state=document.getElementById("state").value; 
  var city=document.getElementById("city").value; 
  var phone=document.getElementById("phone").value; 
+ var zip=document.getElementById("zip").value; 
  var bandera = false;     
  var phoneno = /^\d{10}$/;
-
+console.log(country);
 if(first_name=='' || first_name.length<4 || first_name.length>25 )
 {
  window.alert("capture the first name");
@@ -54,8 +55,15 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
                  }
                  else
                  {
-                  bandera=true;
-                 }
+                   var ercp=/(^([0-9]{5,5})|^)$/;
+
+                     if (!(ercp.test(zip))) {
+                   window.alert("capture the address");
+                    }
+                   else
+                   {
+                     bandera=true;
+                   }
               }
             } 
        }
