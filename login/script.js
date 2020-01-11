@@ -1,3 +1,31 @@
+function login()
+{
+ var password=document.getElementById("pass").value; 
+  
+ var email=document.getElementById("mail").value; 
+ 
+ if(email=='' && password=='')
+     { 
+    alert("From is Incomplete");    
+     }
+  else
+  {
+   var result= firebase.auth().signInWithEmailAndPassword(email,password);
+   result.catch(function(error)
+      {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+    
+    window.alert("Message :" + errorMessage);
+     });
+  }
+ 
+  
+}
+
+
 function create()
 {
  var password=document.getElementById("password").value; 
