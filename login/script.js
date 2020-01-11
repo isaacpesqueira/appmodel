@@ -19,58 +19,61 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
 }
  else
  {
-    if(last_name=='' || last_name.length<4  || last_name.length>25)
-    {
-    window.alert("capture the last name");
-    }
-   else
-   {
-    if(phone=='' || phone.length<17 || phone.length>21 || (!phone.match(phoneno)) )
-    {
-     window.alert("capture the phone");
-     }
-    else
-    {
-        if(country=='Select' || country=='' || country.length<4 || country.length>12)
-        {
-        window.alert("capture the country");
-        }
-       else
-       {
-               if(state=='' || state.length<3 || state.length>12)
-            {
-           window.alert("capture the state");
-            }
-            else
-            {
-              if(city=='' || city.length<3 || city.length>12)
-               {
-             window.alert("capture the city");
-               }
-              else
-              {
-               if(address=='' || address.length<3 || address.length>12)
-                {
-                   window.alert("capture the address");
-                 }
-                 else
-                 {
-                   var ercp=/(^([0-9]{5,5})|^)$/;
+                         if(last_name=='' || last_name.length<4  || last_name.length>25)
+                         {
+                         window.alert("capture the last name");
+                         }
+                        else
+                        {
+                                if(phone=='' || phone.length<17 || phone.length>21 || (!phone.match(phoneno)) )
+                                {
+                                 window.alert("capture the phone");
+                                 }
+                                 else
+                                 {
+                                      if(country=='Select' || country=='' || country.length<4 || country.length>12)
+                                      {
+                                      window.alert("capture the country");
+                                      }
+                                     else
+                                     {
+                                                   if(state=='' || state.length<3 || state.length>12)
+                                                {
+                                               window.alert("capture the state");
+                                                }
+                                                else
+                                                {
+                                                     if(city=='' || city.length<3 || city.length>12)
+                                                      {
+                                                    window.alert("capture the city");
+                                                      }
+                                                          else
+                                                          {
+                                                                  if(address=='' || address.length<3 || address.length>12)
+                                                                   {
+                                                                      window.alert("capture the address");
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                      var ercp=/(^([0-9]{5,5})|^)$/;
 
-                     if (!(ercp.test(zip))) {
-                   window.alert("capture the address");
-                    }
-                   else
-                   {
-                     bandera=true;
-                   }
-              }
-            } 
-       }
+                                                                        if (!(ercp.test(zip))) 
+                                                                        {
+                                                                      window.alert("capture the address");
+                                                                       }
+                                                                        else
+                                                                        {
+                                                                          bandera=true;
+                                                                        }
+                                                                     }
+                                                         } 
+                              }
          
     }
     
    }
+ }
+  
  }
  
  if(bandera==true)
