@@ -12,7 +12,7 @@ function account_settings()
  var zip=document.getElementById("zip").value; 
  var bandera = false;     
  var phoneno = /^\d{10}$/;
-console.log(country);
+
 if(first_name=='' || first_name.length<4 || first_name.length>25 )
 {
  window.alert("capture the first name");
