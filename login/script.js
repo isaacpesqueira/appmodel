@@ -24,13 +24,13 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
     }
    else
    {
-    if(phone=='' || phone.length<4 || phone.length>18 || (!phone.match(phoneno)) )
+    if(phone=='' || phone.length<17 || phone.length>21 || (!phone.match(phoneno)) )
     {
      window.alert("capture the phone");
      }
     else
     {
-        if(country=='' || country.length<4 || country.length>12)
+        if(country=='Select' || country=='' || country.length<4 || country.length>12)
         {
         window.alert("capture the country");
         }
@@ -48,8 +48,14 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
                }
               else
               {
-               
-               bandera=true;
+               if(address=='' || address.length<3 || address.length>12)
+                {
+                   window.alert("capture the address");
+                 }
+                 else
+                 {
+                  bandera=true;
+                 }
               }
             } 
        }
