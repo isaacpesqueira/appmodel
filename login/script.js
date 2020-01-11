@@ -1,3 +1,71 @@
+function account_settings()
+{
+ var fist_name=document.getElementById("fist_name").value; 
+ var last_name=document.getElementById("last_name").value; 
+ var phone=document.getElementById("phone").value; 
+ var country=document.getElementById("pais").value; 
+ var address=document.getElementById("address").value; 
+ var state=document.getElementById("state").value; 
+ var city=document.getElementById("city").value; 
+ var phone=document.getElementById("phone").value; 
+ var bandera = false;     
+ var phoneno = /^\d{10}$/;
+
+if(first_name=='' || first_name.length<4 || first_name.length>25 )
+{
+ window.alert("capture the first name");
+}
+ else
+ {
+    if(last_name=='' || last_name.length<4  || last_name.length>25)
+    {
+    window.alert("capture the last name");
+    }
+   else
+   {
+    if(phone=='' || phone.length<4 || phone.length>18 || (!phone.match(phoneno)) )
+    {
+     window.alert("capture the phone");
+     }
+    else
+    {
+        if(country=='' || country.length<4 || country.length>12)
+        {
+        window.alert("capture the country");
+        }
+       else
+       {
+               if(state=='' || state.length<3 || state.length>12)
+            {
+           window.alert("capture the state");
+            }
+            else
+            {
+              if(city=='' || city.length<3 || city.length>12)
+               {
+             window.alert("capture the city");
+               }
+              else
+              {
+               
+               bandera=true;
+              }
+            } 
+       }
+         
+    }
+    
+   }
+ }
+ 
+ if(bandera==true)
+    {
+    alert("Se envia");
+    
+    }
+ 
+} 
+
 function logout()
 {
  firebase.auth().signOut();
