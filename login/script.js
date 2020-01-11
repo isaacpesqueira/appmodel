@@ -31,25 +31,25 @@ if(first_name=='' || first_name.length<4 || first_name.length>25 )
                                  }
                                  else
                                  {
-                                      if(country=='Select' || country=='' || country.length<4 || country.length>12)
+                                      if(country=='Select' || country=='' || country.length<4 || country.length>25)
                                       {
                                       window.alert("capture the country");
                                       }
                                      else
                                      {
-                                                   if(state=='' || state.length<3 || state.length>12)
+                                                   if(state=='' || state.length<3 || state.length>17)
                                                 {
                                                window.alert("capture the state");
                                                 }
                                                 else
                                                 {
-                                                     if(city=='' || city.length<3 || city.length>12)
+                                                     if(city=='' || city.length<3 || city.length>17)
                                                       {
                                                     window.alert("capture the city");
                                                       }
                                                           else
                                                           {
-                                                                  if(address=='' || address.length<7 || address.length>37)
+                                                                  if(address=='' || address.length<6 || address.length>45)
                                                                    {
                                                                       window.alert("capture the address");
                                                                     }
