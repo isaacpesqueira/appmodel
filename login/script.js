@@ -1,3 +1,10 @@
+function create_table(){
+console.log("process create");  
+  
+  
+}  
+
+
 function generateHexString(length) {
   var ret = "";
   while (ret.length < length) {
