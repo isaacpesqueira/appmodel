@@ -1,1 +1,89 @@
-hola chicos
+<html>
+  <head>
+    <title> AppModel.ml </title>
+   
+     <meta charset = "UTF-8">
+
+      <link rel="stylesheet" href="style.css"  type = "text/css">
+    
+     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+  </head>
+  
+  <body>
+
+<div class="form-modal">
+  <center>  <a href="/"><h2>AppModel.ml </h2></a></center>
+     <div class="form-toggle">
+        <button id="login-toggle" onclick="toggleLogin()">log in</button>
+        <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+    </div>
+
+    <div id="login-form">
+        <form>
+            <input type="text" id="mail"placeholder="Enter email"/>
+            <input type="password" id="pass" placeholder="Enter password"/>
+            <button type="button" class="btn login" onclick="login()">login</button>
+            <p><a href="javascript:void(0)">Forgotten account</a></p>
+            <hr/>
+            <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign in with google</button>
+            <button type="button" class="btn -box-sd-effect"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign in with linkedin</button>
+            <button type="button" class="btn -box-sd-effect"> <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign in with microsoft</button>
+        </form>
+    </div>
+
+    <div id="signup-form">
+        <form>
+            <input type="email" id="email" placeholder="Enter your email"/>
+        
+            <input  id="password" type="password" placeholder="Create password"/>
+          <input  id="retype" type="password" placeholder="Retype password"/>
+            <button type="button" id="signup" class="btn signup" onclick="create()">create account</button>
+            <p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p>
+            <hr/>
+            <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign up with google</button>
+            <button type="button" class="btn -box-sd-effect"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign up with linkedin</button>
+            <button type="button" class="btn -box-sd-effect"> <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign up with microsoft</button>
+        </form>
+    </div>
+
+</div>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDTWmO-1OrAsbBMiSt_3qG1jSlpYxaUPAI",
+    authDomain: "appmodel-25459.firebaseapp.com",
+    databaseURL: "https://appmodel-25459.firebaseio.com",
+    projectId: "appmodel-25459",
+    storageBucket: "appmodel-25459.appspot.com",
+    messagingSenderId: "680928712634",
+    appId: "1:680928712634:web:922ef6c83e6d01aad6af83",
+    measurementId: "G-R6Y2HC3306"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
+  firebase.auth.Auth.Persistence.LOCAL;
+  
+</script>
+    
+<script src="script.js"></script>
+    <script> 
+    firebase.auth().onAuthStateChanged(function(user) 
+   { if(!user) 
+{ window.location.href='/login/'; } }); </script>                                        
+    
+  </body>
+</html>
+    
