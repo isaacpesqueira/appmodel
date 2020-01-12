@@ -1,1 +1,163 @@
+<html>
+  <head>
+    <title> AppModel.ml </title>
+   
+     <meta charset = "UTF-8">
 
+      <link rel="stylesheet" href="style.css"  type = "text/css">
+    
+     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+    <style>
+.blue
+{
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
+  position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.red
+{
+	background-color: #E74C3C;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+  position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.verde
+{
+	background-color: #82BF56;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #669644;
+  position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.yellow
+{
+	background-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	text-shadow: 0px -2px #D1B358;
+  position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;	
+} 
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+	    .animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+    </style>
+
+  </head>
+  
+  <body>
+
+<div class="form-modal">
+  <center>  <a href="/"><h2>AppModel.ml </h2></a></center>
+     <div class="form-toggle">
+       <button id="login-toggle" onclick="toggleLogin()">Home</button> 
+       <button id="signup-toggle" onclick="logout()">Log out</button>
+    </div>
+
+    <div id="login-form">
+        <form>
+		
+   <button type="button" class="btn -box-sd-effect"> Consult </button>		
+   <button type="button" onclick="create_table()" class="btn -box-sd-effect"> Create table </button>	
+		
+            <hr/>
+      <br>
+        
+	   <center>  <a href="#" class="action-button shadow animate blue">Form</a>
+        <a href="#" class="action-button shadow animate red">Chatbot</a> </center>
+		
+		<br>
+		<br>
+           
+     
+   
+		<br>
+		<br>
+		<br>
+		<br>
+        </form>
+    </div>
+
+    <div id="signup-form">
+       
+    </div>
+
+</div>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDTWmO-1OrAsbBMiSt_3qG1jSlpYxaUPAI",
+    authDomain: "appmodel-25459.firebaseapp.com",
+    databaseURL: "https://appmodel-25459.firebaseio.com",
+    projectId: "appmodel-25459",
+    storageBucket: "appmodel-25459.appspot.com",
+    messagingSenderId: "680928712634",
+    appId: "1:680928712634:web:922ef6c83e6d01aad6af83",
+    measurementId: "G-R6Y2HC3306"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
+  firebase.auth.Auth.Persistence.LOCAL;
+  
+</script>
+    
+<script src="script.js"></script>
+    <script> 
+    firebase.auth().onAuthStateChanged(function(user) 
+   { if(!user) 
+{ window.location.href='/login/'; } }); </script>                                        
+    
+  </body>
+</html>
+    
