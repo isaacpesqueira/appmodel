@@ -143,7 +143,7 @@ for (i=1;i<=10;i++) {
 	document.write('<input type="text" id="opt_'+i+'_3" />');
 	document.write('<label class="col-md-4 control-label">option 4 :</label> '); 
 	document.write('<input type="text" id="opt_'+i+'_4" /> <br>');
-	document.write('<label class="col-md-4 control-label">requerido :</label> ');
+	document.write('<label class="col-md-4 control-label">required :</label> ');
 	document.write('<select name="req_'+i+'" id="req_'+i+'" >');
 	document.write('<option value="yes" >yes</option><option value="no" >no</option></select><br>');
 	document.write('</div>');
@@ -168,6 +168,7 @@ for (i=1;i<=10;i++) {
 		}
 			
 function change_fields(){
+	console.log("change fields");
 	var number = document.getElementById('number_f').value;
 	for (i=1;i==number;i++) { 
 	if(i==number)
