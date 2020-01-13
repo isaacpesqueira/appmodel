@@ -28,6 +28,19 @@ console.log("process create");
                 } 
     } 
 
+  ///validacion de todos los campos
+  	var i;
+for (i=1;i<=10;i++) { 
+ 
+            if("f1_name".value.trim() == "")
+            { 
+             window.alert("capture name in" + "field " + i);
+            }
+
+
+}
+    
+    
 
 
 
