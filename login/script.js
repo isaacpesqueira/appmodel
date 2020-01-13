@@ -4,7 +4,38 @@ console.log("process create");
 location.href="create.html";
 
 }  
+function create_table_process(){
+console.log("process create");  
+ var pass_1=false; 
 
+   if (table_name.value.trim() == "")
+   { window.alert("capture table name");
+    }
+    else
+    {
+               if (display_name.value.trim() == "")
+                 { window.alert("capture display name");
+                  }
+                else
+                {
+                      if (description.value.trim() == "")
+                     { window.alert("capture description");
+                      }
+                      else
+                      {      pass_1=true;
+                      }  
+                                     
+                } 
+    } 
+}
+
+
+
+
+
+
+
+}  
 
 function generateHexString(length) {
   var ret = "";
