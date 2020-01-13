@@ -113,7 +113,7 @@
 		<br>
 		<center><p>Fields</p></center>
 		 <label class="col-md-4 control-label">Number of fields</label>
-		<select name="number_f" id="number_f">  
+		<select name="number_f" id="number_f"  onchange="change_fields()" >  
 		<script> 
 					var i;
 				for (i=1;i<=10;i++) { 
@@ -164,7 +164,31 @@ for (i=1;i<=10;i++) {
 
 		}
 			
-			
+function change_fields(){
+	var number = document.getElementById('number_f').value;
+	for (i=1;i==number;i++) { 
+	if(i==number)
+	{
+		
+		document.getElementById(i).style.display = 'block';
+		document.getElementById("f"+i+"_name").value = '';
+		document.getElementById("f"+i+"_type").value = '';
+		document.getElementById("opt_"+i+"_1").value = '';
+                document.getElementById("opt_"+i+"_2").value = '';
+		document.getElementById("opt_"+i+"_3").value = '';
+		document.getElementById("opt_"+i+"_4").value = '';   
+		
+	}
+	else
+	{
+		document.getElementById(i).style.display = 'none';
+	}
+				
+
+
+		}
+	
+}
 		
 			
 document.write('<button type="button" id="create" class="btn signup" onclick="create_table_process()">create table</button>');
