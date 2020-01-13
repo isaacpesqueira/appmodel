@@ -204,18 +204,14 @@ document.write('<button type="button" id="create" class="btn signup" onclick="cr
 function change_fields(){
 	console.log("change fields");
 	var number = document.getElementById('number_f').value;
+	
 	for (i=1;i<=10;i++) { 
 	if(i<number)
 	{
 		   
 		
 		document.getElementById(i).style.display = 'block';
-		document.getElementById("f"+i+"_name").value = '';
-		document.getElementById("f"+i+"_type").value = '';
-		document.getElementById("opt_"+i+"_1").value = '';
-                document.getElementById("opt_"+i+"_2").value = '';
-		document.getElementById("opt_"+i+"_3").value = '';
-		document.getElementById("opt_"+i+"_4").value = '';   
+		document.getElementById("req_"+i).value = 'yes';  
 		
 		
 	}
@@ -224,8 +220,15 @@ function change_fields(){
 		
 		document.getElementById(i).style.display = 'none';
 		
+		document.getElementById("f"+i+"_name").value = '';
+		document.getElementById("f"+i+"_type").value = '';
+		document.getElementById("opt_"+i+"_1").value = '';
+                document.getElementById("opt_"+i+"_2").value = '';
+		document.getElementById("opt_"+i+"_3").value = '';
+		document.getElementById("opt_"+i+"_4").value = '';   
 		
-		document.getElementById("req_"+i).value = 'yes';  
+		document.getElementById("req_"+i).value = '';  
+		
 		
 	}
 				
