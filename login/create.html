@@ -98,15 +98,37 @@
 <div class="form-modal">
   <center>  <a href="/"><h2>AppModel.ml </h2></a></center>
      <div class="form-toggle">
-       <button id="login-toggle" onclick="toggleLogin()">Home</button> 
-       <button id="signup-toggle" onclick="logout()">Log out</button>
+       <button id="login-toggle"  >Create</button> 
+       <button id="signup-toggle" onclick="toggleLogin()"   >Home</button>
     </div>
 
     <div id="login-form">
         <form>
+<label class="col-md-4 control-label">Table name:</label>  
+<input type="text" id="table_name" />
+ <label class="col-md-4 control-label">Display name:</label>  
+<input type="text" id="display_name" />
+ <label class="col-md-4 control-label">Description to show:</label>
+<input type="text" id="description" />
+		<br>
+<label class="col-md-4 control-label">Fields (max.10)</label> 
+<script 
+	var i 
+for (i=1;i<=10;i++) { 
+   	document.write("Field + " i)
+   	document.write('<input type="text" id="f1_name"/><input type="text" id="f1_type"   />'); 
+	document.write('<input type="text" id="opt_1_1" /><input type="text" id="opt_1_2" />');
+	document.write('<input type="text" id="opt_1_3" /><input type="text" id="opt_1_4" />');
+	
+		}  > </script>
+
+
+
+
 		
-   <button type="button" class="btn -box-sd-effect"> Consult </button>		
-   <button type="button" onclick="create_table()" class="btn -box-sd-effect"> Create table </button>	
+		
+				
+		
 		
             <hr/>
       <br>
