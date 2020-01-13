@@ -30,9 +30,10 @@ console.log("process create");
 
   ///validacion de todos los campos
   	var i;
+  var campo;
 for (i=1;i<=10;i++) { 
- 
-            if("f1_name".value.trim() == "")
+ name = document.getElementById("f"+i+"_name").value;
+            if(name.trim() == "")
             { 
              window.alert("capture name in" + "field " + i);
             }
