@@ -206,11 +206,11 @@ function change_fields(){
 	var number = document.getElementById('number_f').value;
 	number= number +1;
 	for (i=1;i<=10;i++) { 
-	if(i>number)
+	if(i<number)
 	{
 		   
 		
-		document.getElementById(i).style.display = 'block';
+		document.getElementById(i).style.display = 'none';
 		document.getElementById("req_"+i).value = 'yes';  
 		
 		
@@ -218,16 +218,7 @@ function change_fields(){
 	else
 	{
 		
-		document.getElementById(i).style.display = 'none';
-		
-		document.getElementById("f"+i+"_name").value = '';
-		document.getElementById("f"+i+"_type").value = '';
-		document.getElementById("opt_"+i+"_1").value = '';
-                document.getElementById("opt_"+i+"_2").value = '';
-		document.getElementById("opt_"+i+"_3").value = '';
-		document.getElementById("opt_"+i+"_4").value = '';   
-		
-		document.getElementById("req_"+i).value = '';  
+	
 		
 		
 	}
