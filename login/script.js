@@ -1,7 +1,7 @@
 function create_table(){
 console.log("process create");  
   
-location.href="home.html";
+location.href="create.html";
 
 }  
 
