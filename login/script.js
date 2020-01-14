@@ -31,12 +31,47 @@ console.log("process create");
   ///validacion de todos los campos
   	var i;
   var campo;
-for (i=1;i<=10;i++) { 
+  var lack="empty" ;
+  var bandera=false;
+   var number = document.getElementById("number_f").value;
+  for (i=1;i<=number;i++) { 
  name = document.getElementById("f"+i+"_name").value;
+   type = document.getElementById("f"+i+"_"+"type").value;
+  
             if(name.trim() == "")
             { 
-             window.alert("capture name in" + "field " + i);
+             lack =  "capture name in" + "field " + i;
+           
             }
+           else
+           {
+                  if(type.trim() == "")
+                    { 
+                     lack =  "capture type in" + "field " + i;
+
+                    }
+                   else
+                   {
+                              for (var j=1;j<=4;j++) { 
+                               option = document.getElementById("opt_"+i+"_"+j).value;
+                                                 if(option.trim() == "")
+                                      { 
+                                       lack =  "capture option "+ j +" in" + "field " + i;
+
+                                      }
+                              }
+                     
+                   } 
+           } 
+
+                          if(lack =="empty")
+                          {
+                        window.alert(lack);
+                          }
+                          else
+                          {
+                           windows.alert("go");
+                          }  
 
 
 }
