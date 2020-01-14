@@ -70,7 +70,7 @@ console.log("process create");
                           }
                           else
                           {
-                           windows.alert("go");
+                           window.alert("go");
                           }  
 
 
