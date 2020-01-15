@@ -17,6 +17,7 @@ function array_create_table(){
     contador_array =  i-1;
      name = document.getElementById("f"+i+"_name").value;
    type = document.getElementById("f"+i+"_"+"type").value;
+     req = document.getElementById("req_"+i).value;
     
      for (var j=1;j<=4;j++) { 
         option = document.getElementById("opt_"+i+"_"+j).value;
@@ -32,7 +33,7 @@ function array_create_table(){
             }              
         }
         
-    fields[contador_array]=name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'; 
+    fields[contador_array]=name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'+req; 
   
     console.log(fields.toString());
     //limpiar array
