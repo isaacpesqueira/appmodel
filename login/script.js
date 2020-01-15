@@ -2,14 +2,20 @@ function fields_bd(fields){
     
     console.log(fields.toString()); 
      console.log(fields[0]); 
-      var api_key ;
+     
       var first_name;
       var last_name;
-      var user = firebase.auth().currentUser;
+    
       var userName;
   
-     
-  console.log(user);
+          var userId = firebase.auth().currentUser.uid;
+return firebase.database().ref('/Users/' + userId).once('value').then(function(snapshot) {
+  var api_key = (snapshot.val() && snapshot.val().api_key) || 'Anonymous';
+  // ...
+});
+    
+                    
+  console.log(api_key);
   
 }
 
