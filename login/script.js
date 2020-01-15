@@ -10,8 +10,9 @@ function array_create_table(){
     var option;
     var counter=4;
     var fields = new Array(9);
-      
+    var contador_array=0; 
   for (var i=1;i<=number;i++) { 
+    contador_array =  i-1;
      name = document.getElementById("f"+i+"_name").value;
    type = document.getElementById("f"+i+"_"+"type").value;
     
@@ -28,7 +29,7 @@ function array_create_table(){
             }              
         }
     fields.push(name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'); 
-      console.log(fields[i]);
+      console.log(fields[contador_array]);
     //limpiar array
        option_array = [];
   }
