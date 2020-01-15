@@ -2,7 +2,23 @@ function fields_bd(fields){
     
     console.log(fields.toString()); 
      console.log(fields[0]); 
+      var api_key ;
+      var first_name;
+      var last_name;
+      var user = firebae.auth().currentUser;
+      var userName;
   
+          
+      firebase.database().ref('Users/'+user.uid).once('value').then(function(snapshot)
+                {
+            var fName = (snapshot.val() && snapshot.val().firstName); 
+            var lName = (snapshot.val() && snapshot.val().lastName); 
+            api_key = (snapshot.val() && snapshot.val().api_key); 
+             userName = fName + " " + lName;           
+                      
+                });   
+                    
+  console.log(userName + "  " + api_key);
   
 }
 
