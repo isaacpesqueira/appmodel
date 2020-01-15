@@ -6,10 +6,11 @@ location.href="create.html";
 }  
 function array_create_table(){
    var number = document.getElementById("number_f").value;
+   var number_array= number -1;
     var option_array = new Array(3);
     var option;
     var counter=4;
-    var fields = new Array(9);
+    var fields = new Array(number);
     var contador_array=0; 
     var contador_array1=0;
   for (var i=1;i<=number;i++) { 
