@@ -5,14 +5,14 @@ function fields_bd(fields){
      
       var first_name;
       var last_name;
-    
+    var api_key;
       var userName;
   
           var user = firebase.auth().currentUser;
 
     firebase.database().ref('Users/'+user.uid).once('value').then(function(snapshot) {
-
-       var api_key = (snapshot.val() && snapshot.val().api_key); 
+            
+                api_key = (snapshot.val() && snapshot.val().api_key); 
      
     });
                     
