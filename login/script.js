@@ -10,15 +10,17 @@ function fields_bd(fields){
   
           var user = firebase.auth().currentUser;
 
-    firebase.database().ref('Users/'+user.uid+'/api_key').once('value').then(function(snapshot) {
-            
-              
-                  var data = snap.val();
-
-     
-    });
+   
+    // Test for the existence of certain keys within a DataSnapshot
+var ref = firebase.database().ref('Users/'+user.uid+'/api_key');
+ref.once("value")
+  .then(function(snapshot) {
+  
+    var api_key = snapshot.child(user.uid+'/api_key').val(); // "Ada"
+console.log(api_key );
+  });
                     
-  console.log(data );
+  
   
 }
 
