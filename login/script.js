@@ -8,17 +8,8 @@ function fields_bd(fields){
       var user = firebase.auth().currentUser;
       var userName;
   
-          
-      firebase.database().ref('Users/'+user.uid).once('value').then(function(snapshot)
-                {
-            var fName = (snapshot.val() && snapshot.val().firstName); 
-            var lName = (snapshot.val() && snapshot.val().lastName); 
-            api_key = (snapshot.val() && snapshot.val().api_key); 
-             userName = fName + " " + lName;           
-                      
-                });   
-                    
-  console.log(userName + "  " + api_key);
+     
+  console.log(user);
   
 }
 
