@@ -4,6 +4,36 @@ console.log("process create");
 location.href="create.html";
 
 }  
+function array_create_table(){
+   var number = document.getElementById("number_f").value;
+    var option_array = new Array(3);
+    var option;
+    var counter=4;
+    var fields = new Array(9);
+      
+  for (var i=1;i<=number;i++) { 
+     name = document.getElementById("f"+i+"_name").value;
+   type = document.getElementById("f"+i+"_"+"type").value;
+    
+     for (var j=1;j<=4;i++) { 
+        option = document.getElementById("opt_"+i+"_"+j).value;
+            if(option.value.trim() == "")
+            {
+            counter = counter-1;
+            }
+            else
+            {
+             option_array.push(option);
+              
+            }              
+        }
+    fields.push(name+'<:>'+type+'<:>'+option.join("<&>")+'<:>'); 
+      console.log(fields)
+    //limpiar array
+       option_array = [];
+  }
+  
+} 
 function create_table_process(){
 console.log("process create");  
  var pass_1=false; 
@@ -52,17 +82,11 @@ console.log("process create");
                     }
                    else
                    {
-                              for (var j=1;j<=4;j++) { 
-                               option = document.getElementById("opt_"+i+"_"+j).value;
-                                                 if(option.trim() == "")
-                                      { 
-                                       lack =  "capture option "+ j +" in" + "field " + i;
-
-                                      }
-                              }
+                            
                      
                    } 
            } 
+  }
 
                           if(lack =="empty")
                           {
@@ -70,11 +94,12 @@ console.log("process create");
                           }
                           else
                           {
-                           window.alert("go");
+                           //enviar
+                            array_create_table();
                           }  
 
 
-}
+
     
     
 
