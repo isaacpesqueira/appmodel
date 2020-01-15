@@ -8,7 +8,7 @@ function fields_bd(fields){
     var api_key;
       var userName;
 
-    var admin = require("firebase-admin");
+  
           var user = firebase.auth().currentUser;
           var ref = db.ref("Users/"+user.uid+"/api_key");
     // Import Admin SDK
