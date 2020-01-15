@@ -5,7 +5,7 @@ function fields_bd(fields){
       var api_key ;
       var first_name;
       var last_name;
-      var user = firebae.auth().currentUser;
+      var user = firebase.auth().currentUser;
       var userName;
   
           
