@@ -16,7 +16,7 @@ function fields_bd(fields){
      
     });
                     
-  console.log(api_key + user);
+  console.log(api_key );
   
 }
 
