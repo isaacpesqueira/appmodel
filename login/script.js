@@ -31,7 +31,7 @@ function array_create_table(){
         
     fields.push(name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'); 
   
-    console.log(fields[contador_array]);
+    console.log(fields.toString());
     //limpiar array
        option_array = [];
   }
