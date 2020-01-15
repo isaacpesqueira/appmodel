@@ -32,7 +32,7 @@ function array_create_table(){
               
             }              
         }
-        
+      
     fields[contador_array]=name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'+req; 
   
     console.log(fields.toString());
