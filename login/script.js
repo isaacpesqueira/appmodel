@@ -26,7 +26,7 @@ function array_create_table(){
             }
             else
             {
-             option_array[contador_array1];
+             option_array[contador_array1]= option;
               
             }              
         }
