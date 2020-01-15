@@ -17,7 +17,7 @@ function array_create_table(){
     
      for (var j=1;j<=4;j++) { 
         option = document.getElementById("opt_"+i+"_"+j).value;
-            if(option.value.trim() == "")
+            if(option.trim() == "")
             {
             counter = counter-1;
             }
