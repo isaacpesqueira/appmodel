@@ -28,7 +28,7 @@ function array_create_table(){
             }              
         }
     fields.push(name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'); 
-      console.log(fields)
+      console.log(fields[i]);
     //limpiar array
        option_array = [];
   }
