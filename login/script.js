@@ -61,7 +61,7 @@ console.log("process create");
   ///validacion de todos los campos
   	var i;
   var campo;
-  var lack="empty" ;
+  var lack='' ;
   var bandera=false;
    var number = document.getElementById("number_f").value;
   for (i=1;i<=number;i++) { 
@@ -88,14 +88,15 @@ console.log("process create");
            } 
   }
 
-                          if(lack =="empty")
+                          if(lack.trim() == "")
                           {
-                        window.alert(lack);
+                             //enviar
+                            array_create_table();
+                   
                           }
                           else
                           {
-                           //enviar
-                            array_create_table();
+                               window.alert(lack);
                           }  
 
 
