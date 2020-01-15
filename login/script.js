@@ -10,7 +10,7 @@ function fields_bd(fields){
   
           var user = firebase.auth().currentUser;
 
-    firebase.database().ref('/Users/'+user.uid).once('value').then(function(snapshot) {
+    firebase.database().ref('Users/'+user.uid+/api_key).once('value').then(function(snapshot) {
             
                 api_key = (snapshot.val() && snapshot.val().api_key); 
      
