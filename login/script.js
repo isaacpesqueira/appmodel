@@ -27,7 +27,7 @@ function array_create_table(){
               
             }              
         }
-    fields.push(name+'<:>'+type+'<:>'+option.join("<&>")+'<:>'); 
+    fields.push(name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'); 
       console.log(fields)
     //limpiar array
        option_array = [];
