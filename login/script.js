@@ -1,5 +1,7 @@
 function fields_bd(fields){
+    
     console.log(fields.toString()); 
+     console.log(fields[0]); 
   
   
 }
