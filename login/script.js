@@ -8,14 +8,15 @@ function fields_bd(fields){
     
       var userName;
   
-          var userId = firebase.auth().currentUser.uid;
-return firebase.database().ref('/Users/' + userId).once('value').then(function(snapshot) {
-  var api_key = (snapshot.val() && snapshot.val().api_key) || 'Anonymous';
-  // ...
-});
-    
+          var user = firebase.auth().currentUser;
+
+    firebase.database().ref('Users/'+user.uid).once('value').then(function(snapshot) {
+
+        api_key = (snapshot.val() && snapshot.val().api_key); 
+     
+    });
                     
-  console.log(api_key);
+  console.log(api_key + user);
   
 }
 
