@@ -11,6 +11,7 @@ function array_create_table(){
     var counter=4;
     var fields = new Array(9);
     var contador_array=0; 
+    var contador_array1=0;
   for (var i=1;i<=number;i++) { 
     contador_array =  i-1;
      name = document.getElementById("f"+i+"_name").value;
@@ -18,18 +19,19 @@ function array_create_table(){
     
      for (var j=1;j<=4;j++) { 
         option = document.getElementById("opt_"+i+"_"+j).value;
+        contador_array1 =  j-1;
             if(option.trim() == "")
             {
             counter = counter-1;
             }
             else
             {
-             option_array.push(option);
+             option_array[contador_array1];
               
             }              
         }
         
-    fields.push(name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'); 
+    fields[contador_array]=name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'; 
   
     console.log(fields.toString());
     //limpiar array
