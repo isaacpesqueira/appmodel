@@ -1,3 +1,9 @@
+function fields_bd(fields){
+    console.log(fields.toString()); 
+  
+  
+}
+
 function create_table(){
 console.log("process create");  
   
@@ -34,12 +40,13 @@ function array_create_table(){
         }
       
     fields[contador_array]=name+'<:>'+type+'<:>'+option_array.join("<&>")+'<:>'+req; 
-  
-    console.log(fields.toString());
+
+ 
     //limpiar array
        option_array = [];
+    
   }
-  
+    fields_bd(fields);
 } 
 function create_table_process(){
 console.log("process create");  
