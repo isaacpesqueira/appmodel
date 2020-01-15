@@ -7,29 +7,23 @@ function fields_bd(fields){
       var last_name;
     var api_key;
       var userName;
-  
+
+    var admin = require("firebase-admin");
           var user = firebase.auth().currentUser;
+          var ref = db.ref("Users/"+user.uid+"/api_key");
+    // Import Admin SDK
 
-   
-    // Test for the existence of certain keys within a DataSnapshot
-var ref = firebase.database().ref('Users/'+user.uid+'/api_key');
-ref.once("value")
-  .then(function(snapshot) {
-  
-    var api_key = snapshot.child(user.uid+'/api_key').val(); // "Ada"
 
-  });
-                    
-var query = firebase.database().ref('Users/'+user.uid).orderByKey();
-query.once("value")
-  .then(function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
+// Get a database reference to our posts
+var db = admin.database();
+// Attach an asynchronous callback to read the data at our posts reference
+ref.on("value", function(snapshot) {
+  console.log(snapshot.val());
+}, function (errorObject) {
+  console.log("The read failed: " + errorObject.code);
+});    
     
-      // childData will be the actual contents of the child
-      var childData = childSnapshot.val();
-  });
-});
-  console.log(childData);
+ 
   
 }
 
