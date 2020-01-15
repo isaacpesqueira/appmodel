@@ -24,13 +24,12 @@ var query = firebase.database().ref('Users/'+user.uid+'/api_key').orderByKey();
 query.once("value")
   .then(function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
-      // key will be "ada" the first time and "alan" the second time
-      var key = childSnapshot.key;
+    
       // childData will be the actual contents of the child
       var childData = childSnapshot.val();
   });
 });
-  console.log(key+childData);
+  console.log(childData);
   
 }
 
