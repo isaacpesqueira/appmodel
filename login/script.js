@@ -20,7 +20,7 @@ ref.once("value")
 
   });
                     
-var query = firebase.database().ref('Users/'+user.uid+'/api_key').orderByKey();
+var query = firebase.database().ref('Users/'+user.uid).orderByKey();
 query.once("value")
   .then(function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
