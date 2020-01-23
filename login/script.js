@@ -13,21 +13,21 @@ function fields_bd(fields){
     console.log(user);
     
     var playersRef = firebase.database().ref("Users/"+user.uid);
-
+///obtenemos api_key
 playersRef.once("value", function(data) {
    var newPlayer = data.val();
    console.log("api_key: " + newPlayer.api_key);
-
- 
 });
-          //var lol = database.ref("Users/"+user.uid+"/api_key");
-    // Import Admin SDK
+//insertamos api key
 
+  playersRef = playersRef.child("table");
+playersRef.push ({
+   name: "John",
+   number: 1,
+   age: 30
+});
 
-// Get a database reference to our posts
-
-// Attach an asynchronous callback to read the data at our posts reference
-
+    
   
 }
 
