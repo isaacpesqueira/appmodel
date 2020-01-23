@@ -23,9 +23,10 @@ playersRef.once("value", function(data) {
 
 playersRef = firebase.database().ref("table");
 playersRef.push ({
-   name: "John",
-   number: 1,
-   age: 30
+     John: {
+      number: 1,
+      age: 30
+   }
 });
     
    
