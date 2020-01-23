@@ -20,7 +20,7 @@ playersRef.once("value", function(data) {
     api_key = newPlayer.api_key;
 });
 //insertamos api key
-
+console.log(api_key);
 playersRef = firebase.database().ref("table/"+api_key+"/");
     
   
