@@ -12,7 +12,7 @@ function fields_bd(fields){
           var user = firebase.auth().currentUser;
     console.log(user);
     
-    var playersRef = firebase.database().ref("Users/");
+    var playersRef = firebase.database().ref("Users/"+user+"/");
 
 playersRef.on("child_added", function(data, prevChildKey) {
    var newPlayer = data.val();
