@@ -12,7 +12,7 @@ function fields_bd(fields){
           var user = firebase.auth().currentUser;
     console.log(user);
     
-    var playersRef = firebase.database().ref("Users/"+user.uid);
+    var playersRef = firebase.database().ref("Users/"+user.uid+"/");
 ///obtenemos api_key
 playersRef.once("value", function(data) {
    var newPlayer = data.val();
