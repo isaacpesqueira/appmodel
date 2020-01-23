@@ -21,8 +21,9 @@ playersRef.once("value", function(data) {
 });
 //insertamos api key
   var rootRef = firebase.database().ref("table");
+   
     
-    rootRef.set({
+    rootRef.push({
     "api_key": api_key,
       "uid": user.uid
 });
