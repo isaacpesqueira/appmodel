@@ -51,7 +51,7 @@ playersRef.once("value", function(data) {
                             }
                             else
                             {
-                                  // window.location.href="home.html";
+                                  window.location.href="home.html";
                             }
                           });
 
