@@ -22,13 +22,34 @@ playersRef.once("value", function(data) {
 //insertamos api key
 
 playersRef = firebase.database().ref("table");
-playersRef.set ({
-   api_key: {
-      "number": 1,
-      "age": 30
-   }
-});
     
+   var userData = 
+     {
+           api_key: {
+                  "number": 1,
+                  "age": 30
+               }
+
+     };
+    
+            playersRef.set(userData, function(error)
+              {
+                if(error)
+                {
+                     var errorCode = error.code;
+                     var errorMessage = error.message;
+                     console.log(errorCode);
+                     console.log(errorMessage);
+
+                     window.alert("Message :" + errorMessage);
+                }
+                else
+                {
+                       window.location.href="home.html";
+                }
+              });
+    
+
    
 }
 
