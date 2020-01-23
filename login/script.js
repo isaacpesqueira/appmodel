@@ -13,6 +13,7 @@ function fields_bd(fields){
   
      var table_name = document.getElementById("table_name").value;
      var display_name = document.getElementById("display_name").value;
+     var description = document.getElementById("description").value;
 
   
           var user = firebase.auth().currentUser;
@@ -30,6 +31,7 @@ playersRef.once("value", function(data) {
                  {
                    "table_name":table_name ,
                    "display_name":display_name ,
+                   "description":description ,
                    "data_fields": fields_string
               
               
