@@ -20,9 +20,8 @@ playersRef.once("value", function(data) {
     api_key = newPlayer.api_key;
 });
 //insertamos api key
- ref = new Firebase('https://appmodel-25459.firebaseio.com/');
 
-var playersRef = ref.child("table");
+var playersRef = firebase.database().ref.child("table");
 playersRef.push ({
    name: "John",
    number: 1,
