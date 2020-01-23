@@ -18,35 +18,39 @@ playersRef.once("value", function(data) {
    var newPlayer = data.val();
    console.log("api_key: " + newPlayer.api_key);
     api_key = newPlayer.api_key;
+    console.log(api_key);
+   playersRef = firebase.database().ref("table/"+api_key+"/");
+                          var userData = 
+                 {
+                   number: 1,
+                   age: 30
+
+                 };
+
+                        playersRef.set(userData, function(error)
+                          {
+                            if(error)
+                            {
+                                 var errorCode = error.code;
+                                 var errorMessage = error.message;
+                                 console.log(errorCode);
+                                 console.log(errorMessage);
+
+                                 window.alert("Message :" + errorMessage);
+                            }
+                            else
+                            {
+                                   window.location.href="home.html";
+                            }
+                          });
+
+
 });
 //insertamos api key
-console.log(api_key);
-playersRef = firebase.database().ref("table/"+api_key+"/");
+
     
   
-    var userData = 
-     {
-       number: 1,
-       age: 30
-
-     };
-    
-            playersRef.set(userData, function(error)
-              {
-                if(error)
-                {
-                     var errorCode = error.code;
-                     var errorMessage = error.message;
-                     console.log(errorCode);
-                     console.log(errorMessage);
-
-                     window.alert("Message :" + errorMessage);
-                }
-                else
-                {
-                       window.location.href="home.html";
-                }
-              });
+  
     
 
    
