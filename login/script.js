@@ -22,8 +22,8 @@ playersRef.once("value", function(data) {
    playersRef = firebase.database().ref("table/"+api_key+"/");
                           var userData = 
                  {
-                   number: 1,
-                   age: 30
+                   "number": 1,
+                   "age": fields.toString()
 
                  };
 
