@@ -19,43 +19,16 @@ playersRef.once("value", function(data) {
    console.log("api_key: " + newPlayer.api_key);
 });
 //insertamos api key
-  var rootRef = firebase.database().ref().child("table");
-     var userID = firebase.auth().currentUser.uid;
-     var usersRef = rootRef.child(userID);
-
-
- var userData = 
-     {
-   
-      "api_key": api_key,
-      "uid": user.uid,
-     
-     };
+  var rootRef = firebase.database().ref();
     
-            usersRef.set(userData, function(error)
-              {
-                if(error)
-                {
-                     var errorCode = error.code;
-                     var errorMessage = error.message;
-                     console.log(errorCode);
-                     console.log(errorMessage);
+    rootRef.child("table").set({
+    "api_key": api_key,
+      "uid": user.uid
+});
 
-                     window.alert("Message :" + errorMessage);
-                }
-                else
-                {
-                    window.alert("Succeful table ");
-                       window.location.href="home.html";
-                }
-              });
-     
-    
+
     
    
-
-    
-  
 }
 
 function create_table(){
