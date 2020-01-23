@@ -10,20 +10,24 @@ function fields_bd(fields){
 
   
           var user = firebase.auth().currentUser;
-          var lol = database.ref("Users/"+user.uid+"/api_key");
+    console.log(user);
+    
+    var playersRef = firebase.database().ref("Users/");
+
+playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val();
+   console.log("api_key: " + newPlayer.api_key);
+
+   console.log("Previous Player: " + prevChildKey);
+});
+          //var lol = database.ref("Users/"+user.uid+"/api_key");
     // Import Admin SDK
 
 
 // Get a database reference to our posts
 
 // Attach an asynchronous callback to read the data at our posts reference
-lol.on("value", function(snapshot) {
-  console.log(snapshot.val());
-}, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
-});    
-    
- 
+
   
 }
 
