@@ -22,10 +22,10 @@ playersRef.once("value", function(data) {
 //insertamos api key
 
 playersRef = firebase.database().ref("table");
-playersRef.push ({
+playersRef.set ({
    api_key: {
-      number: 1,
-      age: 30
+      "number": 1,
+      "age": 30
    }
 });
     
