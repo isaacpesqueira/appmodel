@@ -9,6 +9,10 @@ function fields_bd(fields){
       var last_name;
     var api_key;
       var userName;
+      
+  
+     var table_name = document.getElementById("table_name").value;
+     var display_name = document.getElementById("display_name").value;
 
   
           var user = firebase.auth().currentUser;
@@ -24,6 +28,8 @@ playersRef.once("value", function(data) {
    playersRef = firebase.database().ref("table/"+api_key+"/");
                           var userData = 
                  {
+                   "table_name":table_name ,
+                   "display_name":display_name ,
                    "data_fields": fields_string
               
               
