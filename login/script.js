@@ -14,11 +14,11 @@ function fields_bd(fields){
     
     var playersRef = firebase.database().ref("Users/"+user.uid);
 
-playersRef.on("child_added", function(data, prevChildKey) {
+playersRef.once("value", function(data) {
    var newPlayer = data.val();
    console.log("api_key: " + newPlayer.api_key);
 
-   console.log("Previous Player: " + prevChildKey);
+ 
 });
           //var lol = database.ref("Users/"+user.uid+"/api_key");
     // Import Admin SDK
