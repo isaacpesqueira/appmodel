@@ -17,6 +17,7 @@ function fields_bd(fields){
 playersRef.once("value", function(data) {
    var newPlayer = data.val();
    console.log("api_key: " + newPlayer.api_key);
+    api_key = newPlayer.api_key;
 });
 //insertamos api key
   var rootRef = firebase.database().ref("table");
