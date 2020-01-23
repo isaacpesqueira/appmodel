@@ -19,7 +19,7 @@ playersRef.once("value", function(data) {
    console.log("api_key: " + newPlayer.api_key);
 });
 //insertamos api key
-  var rootRef = firebase.database().ref().child("Users");
+  var rootRef = firebase.database().ref().child("table");
      var userID = firebase.auth().currentUser.uid;
      var usersRef = rootRef.child(userID);
 
