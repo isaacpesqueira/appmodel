@@ -19,13 +19,40 @@ playersRef.once("value", function(data) {
    console.log("api_key: " + newPlayer.api_key);
 });
 //insertamos api key
+  var rootRef = firebase.database().ref().child("Users");
+     var userID = firebase.auth().currentUser.uid;
+     var usersRef = rootRef.child(userID);
 
-  playersRef = playersRef.child("table");
-playersRef.push ({
-   name: "John",
-   number: 1,
-   age: 30
-});
+
+ var userData = 
+     {
+   
+      "api_key": api_key,
+      "uid": user.uid,
+     
+     };
+    
+            usersRef.set(userData, function(error)
+              {
+                if(error)
+                {
+                     var errorCode = error.code;
+                     var errorMessage = error.message;
+                     console.log(errorCode);
+                     console.log(errorMessage);
+
+                     window.alert("Message :" + errorMessage);
+                }
+                else
+                {
+                    window.alert("Succeful table ");
+                       window.location.href="home.html";
+                }
+              });
+     
+    
+    
+   
 
     
   
