@@ -21,14 +21,13 @@ playersRef.once("value", function(data) {
 });
 //insertamos api key
 
-playersRef = firebase.database().ref("table");
+playersRef = firebase.database().ref("table/"+api_key+"/");
     
-   var userData = 
+  
+    var userData = 
      {
-           "+api_key+": {
-                  number: 1,
-                  age: 30
-               }
+       number: 1,
+       age: 30
 
      };
     
