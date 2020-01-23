@@ -21,7 +21,7 @@ playersRef.once("value", function(data) {
 });
 //insertamos api key
 
-var playersRef = firebase.database().ref.child("table");
+playersRef = firebase.database().ref("table");
 playersRef.push ({
    name: "John",
    number: 1,
