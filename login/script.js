@@ -1,7 +1,9 @@
 function fields_bd(fields){
+  
+  var fields_string = fields.join('<%>');
     
     console.log(fields.toString()); 
-     console.log(fields[0]); 
+     console.log(fields_string); 
      
       var first_name;
       var last_name;
@@ -22,7 +24,7 @@ playersRef.once("value", function(data) {
    playersRef = firebase.database().ref("table/"+api_key+"/");
                           var userData = 
                  {
-                   "fields": fields.toString()
+                   "fields": fields_string
               
 
                  };
