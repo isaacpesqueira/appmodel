@@ -155,7 +155,7 @@ for (i=1;i<=10;i++) {
 	
 	const selector =".f"+i+"_type";
 	const selectElement = document.querySelector(selector); selectElement.addEventListener("change", (event) => {    
-	var selector_select = document.getElementById(selector).value;
+	var selector_select = document.getElementById("f"+i+"_type").value;
 								if(selector_select=="list")
 								{	
 								list = document.getElementById("opt_"+i+"_1");
