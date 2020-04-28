@@ -157,32 +157,22 @@ for (i=1;i<=10;i++) {
 	//const selectElement = document.querySelector(selector); selectElement.addEventListener("change", (event) => {    
 	//var select = document.getElementById("f"+i+"_type").value;
 	var select = document.getElementById(select_id);
+	
+	var list = document.getElementById("opt_"+i+"_1");
+								    list.style.display = 'block';
+								
 	select.addEventListener('change',
 		  function(){
 		    var selectedOption = this.options[select.selectedIndex];
-		
+		    var list;
 		    console.log(selectedOption.value + ': ' + selectedOption.text);
 						if(selectedOption.text == "list")
 								{	
-								list = document.getElementById("opt_"+i+"_1");
-								    list.style.display = 'block';
-								list = document.getElementById("opt_"+i+"_2");
-								    list.style.display = 'block';
-								list = document.getElementById("opt_"+i+"_3");
-								    list.style.display = 'block';
-								list = document.getElementById("opt_"+i+"_4");
-								    list.style.display = 'block';
+								
 								}	
 								else
 								{
-								list = document.getElementById("opt_"+i+"_1");
-								    list.style.display = 'none';
-								list = document.getElementById("opt_"+i+"_2");
-								    list.style.display = 'none';
-								list = document.getElementById("opt_"+i+"_3");
-								    list.style.display = 'none';
-								list = document.getElementById("opt_"+i+"_4");
-								    list.style.display = 'none';
+								
 								}
 		
 		  });
