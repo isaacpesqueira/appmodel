@@ -139,7 +139,7 @@ for (i=1;i<=10;i++) {
 	document.write('<select class="f'+i+'_type" id="f'+i+'_type" ><option value="text">text</option><option value="list">list</option></select>   <br> ');
 	
  	
-	document.write('<label class="col-md-4 control-label">option 1 :</label> '); 
+	document.write('<div id="options'+i+'"><label class="col-md-4 control-label">option 1 :</label> '); 
 	document.write('<input type="text" id="opt_'+i+'_1" />');
 	document.write('<label class="col-md-4 control-label">option 2 :</label> '); 
 	document.write('<input type="text" id="opt_'+i+'_2" />');
@@ -149,7 +149,7 @@ for (i=1;i<=10;i++) {
 	document.write('<input type="text" id="opt_'+i+'_4" /> <br>');
 	document.write('<label class="col-md-4 control-label">required :</label> ');
 	document.write('<select name="req_'+i+'" id="req_'+i+'" >');
-	document.write('<option value="yes" >yes</option><option value="no" >no</option></select><br>');
+	document.write('<option value="yes" >yes</option><option value="no" >no</option></select><br></div>');
 	document.write('</div>');
 
 	
@@ -158,10 +158,8 @@ for (i=1;i<=10;i++) {
 	//var select = document.getElementById("f"+i+"_type").value;
 	var select = document.getElementById(select_id);
 	
-							document.getElementById("opt_"+i+"_1").style.display = 'none';
-							  document.getElementById("opt_"+i+"_2").style.display = 'none';
-							document.getElementById("opt_"+i+"_3").style.display = 'none';
-							  document.getElementById("opt_"+i+"_4").style.display = 'none';
+							document.getElementById("options"+i).style.display = 'none';
+							 
 								
 	select.addEventListener('change',
 		  function(){
@@ -175,10 +173,7 @@ for (i=1;i<=10;i++) {
 		    console.log(selectedOption.value + ': ' + selectedOption.text);
 						if(selectedOption.text != "text")
 								{	
-							  document.getElementById("opt_"+i+"_1").style.display = 'block';
-							  document.getElementById("opt_"+i+"_2").style.display = 'block';
-							document.getElementById("opt_"+i+"_3").style.display = 'block';
-							  document.getElementById("opt_"+i+"_4").style.display = 'block'; 
+							document.getElementById("options"+i).style.display = 'block';
 						
 								}	
 							
