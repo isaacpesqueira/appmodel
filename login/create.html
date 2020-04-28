@@ -138,9 +138,7 @@ for (i=1;i<=10;i++) {
 	
 	document.write('<select class="f'+i+'_type" id="f'+i+'_type" ><option value="text">text</option><option value="list">list</option></select>   <br> ');
 	
- 	const selector =".f"+i+"_type";
-	const selectElement = document.querySelector(selector); selectElement.addEventListener("change", (event) => {  alert("Hola  isaac");   });  
-
+ 	
 	document.write('<label class="col-md-4 control-label">option 1 :</label> '); 
 	document.write('<input type="text" id="opt_'+i+'_1" />');
 	document.write('<label class="col-md-4 control-label">option 2 :</label> '); 
@@ -154,6 +152,26 @@ for (i=1;i<=10;i++) {
 	document.write('<option value="yes" >yes</option><option value="no" >no</option></select><br>');
 	document.write('</div>');
 
+	
+	const selector =".f"+i+"_type";
+	const selectElement = document.querySelector(selector); selectElement.addEventListener("change", (event) => {    
+	var selector_select = document.getElementById(selector).value;
+								if(selector_select=="text")
+								{	
+								list = document.getElementById("opt_"+i+"_1");
+								    list.style.display = 'none';
+								list = document.getElementById("opt_"+i+"_2");
+								    list.style.display = 'none';
+								list = document.getElementById("opt_"+i+"_3");
+								    list.style.display = 'none';
+								list = document.getElementById("opt_"+i+"_4");
+								    list.style.display = 'none';
+								}	
+														    
+														    });  
+ 
+	
+	
 		}
 			
 ///none groups fields
