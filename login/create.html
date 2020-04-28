@@ -158,21 +158,43 @@ for (i=1;i<=10;i++) {
 	//var select = document.getElementById("f"+i+"_type").value;
 	var select = document.getElementById(select_id);
 	
-	var list = document.getElementById("opt_"+i+"_1");
-								    list.style.display = 'none';
+	
 								
 	select.addEventListener('change',
 		  function(){
 		    var selectedOption = this.options[select.selectedIndex];
-		    var list;
+		   	var list1 = document.getElementById("opt_"+i+"_1");
+			var list2 = document.getElementById("opt_"+i+"_2");
+			var list3 = document.getElementById("opt_"+i+"_3");
+			var list4 = document.getElementById("opt_"+i+"_4");
 		    console.log(selectedOption.value + ': ' + selectedOption.text);
 						if(selectedOption.text == "list")
 								{	
-								
+							
+							 list1.style.display = 'none';
+
+							
+							 list2.style.display = 'none';
+
+							
+							 list3.style.display = 'none';
+
+							
+							 list4.style.display = 'none';
 								}	
 								else
 								{
 								
+							 list1.style.display = 'block';
+
+							
+							 list2.style.display = 'block';
+
+							
+							 list3.style.display = 'block';
+
+							
+							 list4.style.display = 'block';
 								}
 		
 		  });
