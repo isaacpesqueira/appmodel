@@ -156,27 +156,11 @@ for (i=1;i<=10;i++) {
 	const select_id ="f"+i+"_type";
 	//const selectElement = document.querySelector(selector); selectElement.addEventListener("change", (event) => {    
 	//var select = document.getElementById("f"+i+"_type").value;
-	var select = document.getElementById(select_id);
+	
 	
 							document.getElementById("options"+i).style.display = 'none';
 							 
-								
-	select.addEventListener('change',
-		  function(){
-		    var selectedOption = this.options[select.selectedIndex];
-		   	var list1 = document.getElementById("opt_"+i+"_1");
-			var list2 = document.getElementById("opt_"+i+"_2");
-			var list3 = document.getElementById("opt_"+i+"_3");
-			var list4 = document.getElementById("opt_"+i+"_4");
-			var boolean=1;
-		 				
-		    console.log(selectedOption.value + ': ' + selectedOption.text);
-						
-						document.getElementById("options"+i).style.display = 'block';	
-							
-							
-		
-		  });
+	
 					    
 														 
  
@@ -386,6 +370,62 @@ function change_fields(){
 	  }		  
 			  
 			 }
+	
+	
+		const select_id ="f1_type";					 
+	var select = document.getElementById(select_id);							
+	select.addEventListener('change',
+		  function(){
+		    var selectedOption = this.options[select.selectedIndex];
+		 				
+		    console.log(selectedOption.value + ': ' + selectedOption.text);
+
+						document.getElementById("options1").style.display = 'block';	
+		  });
+	
+		const select_id ="f1_type";					 
+	var select = document.getElementById(select_id);							
+	select.addEventListener('change',
+		  function(){
+		    var selectedOption = this.options[select.selectedIndex];
+		 				
+		    console.log(selectedOption.value + ': ' + selectedOption.text);
+
+						document.getElementById("options2").style.display = 'block';	
+		  });
+	
+		const select_id ="f2_type";					 
+	var select = document.getElementById(select_id);							
+	select.addEventListener('change',
+		  function(){
+		    var selectedOption = this.options[select.selectedIndex];
+		 				
+		    console.log(selectedOption.value + ': ' + selectedOption.text);
+
+						document.getElementById("options3").style.display = 'block';	
+		  });
+	
+		const select_id ="f3_type";					 
+	var select = document.getElementById(select_id);							
+	select.addEventListener('change',
+		  function(){
+		    var selectedOption = this.options[select.selectedIndex];
+		 				
+		    console.log(selectedOption.value + ': ' + selectedOption.text);
+
+						document.getElementById("options4").style.display = 'block';	
+		  });
+		const select_id ="f4_type";					 
+	var select = document.getElementById(select_id);							
+	select.addEventListener('change',
+		  function(){
+		    var selectedOption = this.options[select.selectedIndex];
+		 				
+		    console.log(selectedOption.value + ': ' + selectedOption.text);
+
+						document.getElementById("options1").style.display = 'block';	
+		  });
+	
 	
 	
 	
