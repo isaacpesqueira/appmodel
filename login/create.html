@@ -168,14 +168,19 @@ for (i=1;i<=10;i++) {
 			var list2 = document.getElementById("opt_"+i+"_2");
 			var list3 = document.getElementById("opt_"+i+"_3");
 			var list4 = document.getElementById("opt_"+i+"_4");
-		
+			var boolean=1;
 		 				
 		    console.log(selectedOption.value + ': ' + selectedOption.text);
-						if(selectedOption.text != "text")
+						if(selectedOption.text == "text" &&  boolean==1 )
 								{	
-							document.getElementById("options"+i).style.display = 'block';
+							
 						
-								}	
+								}
+						else
+						{
+						document.getElementById("options"+i).style.display = 'block';	
+							
+						}	
 							
 		
 		  });
