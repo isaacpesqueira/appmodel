@@ -158,7 +158,10 @@ for (i=1;i<=10;i++) {
 	//var select = document.getElementById("f"+i+"_type").value;
 	var select = document.getElementById(select_id);
 	
-	
+							document.getElementById("opt_"+i+"_1").style.display = 'none';
+							  document.getElementById("opt_"+i+"_2").style.display = 'none';
+							document.getElementById("opt_"+i+"_3").style.display = 'none';
+							  document.getElementById("opt_"+i+"_4").style.display = 'none';
 								
 	select.addEventListener('change',
 		  function(){
@@ -167,8 +170,10 @@ for (i=1;i<=10;i++) {
 			var list2 = document.getElementById("opt_"+i+"_2");
 			var list3 = document.getElementById("opt_"+i+"_3");
 			var list4 = document.getElementById("opt_"+i+"_4");
+		
+		 				
 		    console.log(selectedOption.value + ': ' + selectedOption.text);
-						if(selectedOption.text == "list")
+						if(selectedOption.text != "text")
 								{	
 							  document.getElementById("opt_"+i+"_1").style.display = 'block';
 							  document.getElementById("opt_"+i+"_2").style.display = 'block';
@@ -176,14 +181,7 @@ for (i=1;i<=10;i++) {
 							  document.getElementById("opt_"+i+"_4").style.display = 'block'; 
 						
 								}	
-								else
-								{
-								
-							  document.getElementById("opt_"+i+"_1").style.display = 'none';
-							  document.getElementById("opt_"+i+"_2").style.display = 'none';
-							document.getElementById("opt_"+i+"_3").style.display = 'none';
-							  document.getElementById("opt_"+i+"_4").style.display = 'none';
-								}
+							
 		
 		  });
 					    
