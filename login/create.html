@@ -155,9 +155,8 @@ for (i=1;i<=10;i++) {
 	
 	const selector =".f"+i+"_type";
 	const selectElement = document.querySelector(selector); selectElement.addEventListener("change", (event) => {    
-	var select = document.getElementById("f"+i+"_type");
-		   var selectedOption = this.options[select.selectedIndex];
-    console.log(selectedOption.value + ': ' + selectedOption.text);
+	var select = document.getElementById("f"+i+"_type").value;
+	
 					    
 														    });  
  
