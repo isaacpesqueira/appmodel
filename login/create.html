@@ -156,8 +156,19 @@ for (i=1;i<=10;i++) {
 	const selector =".f"+i+"_type";
 	const selectElement = document.querySelector(selector); selectElement.addEventListener("change", (event) => {    
 	var selector_select = document.getElementById(selector).value;
-								if(selector_select=="text")
+								if(selector_select=="list")
 								{	
+								list = document.getElementById("opt_"+i+"_1");
+								    list.style.display = 'block';
+								list = document.getElementById("opt_"+i+"_2");
+								    list.style.display = 'block';
+								list = document.getElementById("opt_"+i+"_3");
+								    list.style.display = 'block';
+								list = document.getElementById("opt_"+i+"_4");
+								    list.style.display = 'block';
+								}	
+								else
+								{
 								list = document.getElementById("opt_"+i+"_1");
 								    list.style.display = 'none';
 								list = document.getElementById("opt_"+i+"_2");
@@ -166,7 +177,7 @@ for (i=1;i<=10;i++) {
 								    list.style.display = 'none';
 								list = document.getElementById("opt_"+i+"_4");
 								    list.style.display = 'none';
-								}	
+								}
 														    
 														    });  
  
