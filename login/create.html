@@ -170,31 +170,19 @@ for (i=1;i<=10;i++) {
 		    console.log(selectedOption.value + ': ' + selectedOption.text);
 						if(selectedOption.text == "list")
 								{	
-							
-							 list1.style.display = 'none';
-
-							
-							 list2.style.display = 'none';
-
-							
-							 list3.style.display = 'none';
-
-							
-							 list4.style.display = 'none';
+							  document.getElementById("opt_"+i+"_1").style.display = 'block';
+							  document.getElementById("opt_"+i+"_2").style.display = 'block';
+							document.getElementById("opt_"+i+"_3").style.display = 'block';
+							  document.getElementById("opt_"+i+"_4").style.display = 'block'; 
+						
 								}	
 								else
 								{
 								
-							 list1.style.display = 'block';
-
-							
-							 list2.style.display = 'block';
-
-							
-							 list3.style.display = 'block';
-
-							
-							 list4.style.display = 'block';
+							  document.getElementById("opt_"+i+"_1").style.display = 'none';
+							  document.getElementById("opt_"+i+"_2").style.display = 'none';
+							document.getElementById("opt_"+i+"_3").style.display = 'none';
+							  document.getElementById("opt_"+i+"_4").style.display = 'none';
 								}
 		
 		  });
