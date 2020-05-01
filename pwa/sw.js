@@ -45,7 +45,7 @@ self.addEventListener('install',e =>
 						});
 
 
-			});
+			})
 			);
 
 	});
