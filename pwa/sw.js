@@ -97,7 +97,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheWhitelist.indexOf(cacheName) === -1) {     //cacheName = 'cache-v1'
-            return caches.delete(cache); //Deleting the cache
+            return caches.delete(cacheName); //Deleting the cache
           }
         })
       );
