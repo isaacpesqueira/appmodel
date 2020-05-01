@@ -31,61 +31,26 @@ var urltoCache = [
 //Evento install
 //instalacion del service worket y guardar en el cache recuros
 //estaticos
-self.addEventListener('install',e =>
-	{
-			e.waitUntil(
-				caches.open(CACHE_NAME)
-				.then(cache-> {
-				return cache.addAll(urlsToCache)
-						.then(() => {
-							self.skipWaiting();
-						})
-						.catch(err => {
-						console.log("No se registro en el cache", err);
-						});
 
 
-			})
-			);
+self.addEventListener('install', (event) => {
+    console.info('Event: Install');
 
-	});
+    event.waitUntil(
+      caches.open(CACHE_NAME)
+      .then((cache) => {
+        //[] of files to cache & if any of the file not present `addAll` will fail
+        return cache.addAll(urlsToCache)
+        .then(() => {
+          console.info('All files are cached');
+          return self.skipWaiting(); //To forces the waiting service worker to become the active service worker
+        })
+        .catch((error) =>  {
+          console.error('Failed to cache', error);
+        })
+      })
+    );
+  });
 
-//Evento activate
-console.log("Process activate");
-self.addEventListener('activate',e=>{
-			const cacheWhitelist=[CACHE_NAME];
-
-		e.waitUntil( 
-		caches.keys() 
-		.then(cacheNames => {
-				return Promise.all(
-							cacheNames.map(cacheName=> {
-
-								if(cacheWhitelist.indexOf(cacheName)=== -1)
-								{
-											///borrar elemento que no necesitamos
-										return caches.delete(cacheName);
-								}	
-					
-							})
-		);
-					
-		})
-
-.then(() =>{
-	//Activar cache 
-	self.clients.claim();
-
-});
-
-});
-
-
-
-
-
-
-
-//Evento fetch (recibir informacion)
 
 
