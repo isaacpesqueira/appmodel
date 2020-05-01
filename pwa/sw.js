@@ -95,13 +95,16 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map((cacheName) => {
+        cacheNames.map(cacheName => {
           if (cacheWhitelist.indexOf(cacheName) === -1) {     //cacheName = 'cache-v1'
             return caches.delete(cacheName); //Deleting the cache
           }
+
         })
       );
     })
   );
+  .then(()=>{ ///Activar Cache
+  		self.clients.claim();});
 });
 
