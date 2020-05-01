@@ -59,7 +59,7 @@ self.addEventListener('activate',e=>{
 		caches.keys() 
 		.then(cacheNames => {
 				return Promise.all(
-					cacheNames.map(cacheName=>{
+					cacheNames.map(cacheName=> {
 
 						if(cacheWhitelist.indexOf(cacheName)=== -1)
 						{
@@ -67,7 +67,7 @@ self.addEventListener('activate',e=>{
 								return caches.delete(cacheName);
 						}	
 			
-				});
+				})
 );
 					
 		})
