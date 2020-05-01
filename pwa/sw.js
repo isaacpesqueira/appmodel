@@ -59,16 +59,16 @@ self.addEventListener('activate',e=>{
 		caches.keys() 
 		.then(cacheNames => {
 				return Promise.all(
-					cacheNames.map(cacheName=> {
+							cacheNames.map(cacheName=> {
 
-						if(cacheWhitelist.indexOf(cacheName)=== -1)
-						{
-									///borrar elemento que no necesitamos
-								return caches.delete(cacheName);
-						}	
-			
-				});
-);
+								if(cacheWhitelist.indexOf(cacheName)=== -1)
+								{
+											///borrar elemento que no necesitamos
+										return caches.delete(cacheName);
+								}	
+					
+							})
+		);
 					
 		})
 
