@@ -90,13 +90,13 @@ self.addEventListener('install', (event) => {
 //Adding `activate` event listener
 self.addEventListener('activate', (event) => {
   console.info('Event: Activate');
-
+  const cacheWhitelist = [CACHE_NAME];
   //Remove old and unwanted caches
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== cacheName) {     //cacheName = 'cache-v1'
+        cacheNames.map((cacheName) => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {     //cacheName = 'cache-v1'
             return caches.delete(cache); //Deleting the cache
           }
         })
