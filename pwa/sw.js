@@ -51,6 +51,36 @@ self.addEventListener('install',e =>
 	});
 
 //Evento activate
+console.log("Process activate");
+self.addEventListener('activate',e=>{
+			const cacheWhitelist=[CACHE_NAME];
+
+		e.waitUntil( 
+		caches.keys() 
+		.then(cacheNames => {
+				return Promise.all(
+					cacheNames.map(cacheName=>{
+
+						if(cacheWhitelist.indexOf(cacheName)=== -1)
+						{
+									///borrar elemento que no necesitamos
+								return caches.delete(cacheName);
+						}	
+					});
+);
+					
+		})
+
+.then(() =>{
+	//Activar cache 
+	self.clients.claim();
+
+});
+	);
+});
+
+
+
 
 
 
