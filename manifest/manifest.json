@@ -1,0 +1,15 @@
+{
+	"name": "AppModel Mexicali",
+	"short_name" : "Apps Web",
+	"description":"Hacemos despegar tu web a internet , buscamos soluciones web",
+	"background_color":"#FFF",
+	"theme_color":"#1974cf",
+	"orientation":"portrait",
+	"display":"standalone",
+	"start_url":"./index.html?utm_source=web_app_manifest",
+	"scope":"./",
+	"lang":"es-MX",
+	"":"",
+
+
+}
