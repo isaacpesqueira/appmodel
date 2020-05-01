@@ -14,9 +14,3 @@ console.log('No WORKER , SERVICE WORKER');
 }
 
 //Scroll suavizado
-
-$(document).ready(function(){
-
-
-
-}
