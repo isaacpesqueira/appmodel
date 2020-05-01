@@ -9,7 +9,6 @@
 	"start_url":"./index.html?utm_source=web_app_manifest",
 	"scope":"./",
 	"lang":"es-MX",
-	"":"",
-
-
+	
+	
 }
