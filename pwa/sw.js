@@ -66,7 +66,8 @@ self.addEventListener('activate',e=>{
 									///borrar elemento que no necesitamos
 								return caches.delete(cacheName);
 						}	
-					});
+			
+				});
 );
 					
 		})
