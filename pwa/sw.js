@@ -40,7 +40,7 @@ self.addEventListener('install', (event) => {
       caches.open(CACHE_NAME)
       .then((cache) => {
         //[] of files to cache & if any of the file not present `addAll` will fail
-        return cache.addAll(urlsToCache)
+        return cache.addAll(urlToCache)
         .then(() => {
           console.info('All files are cached');
           return self.skipWaiting(); //To forces the waiting service worker to become the active service worker
