@@ -4,11 +4,11 @@
 
 if('serviceWorker' in navigator)
 {
-console.log('Yes');	
+console.log('YES !! SERVICE WORKER EXISTS');	
 }
 else
 {
-console.log('No');		
+console.log('No WORKER , SERVICE WORKER');		
 }
 
 //Scroll suavizado
