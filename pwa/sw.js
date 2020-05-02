@@ -1,22 +1,11 @@
+
+
 console.log("I am Service Worker");
 
 
 console.log("Firebase");
 
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDTWmO-1OrAsbBMiSt_3qG1jSlpYxaUPAI",
-    authDomain: "appmodel-25459.firebaseapp.com",
-    databaseURL: "https://appmodel-25459.firebaseio.com",
-    projectId: "appmodel-25459",
-    storageBucket: "appmodel-25459.appspot.com",
-    messagingSenderId: "680928712634",
-    appId: "1:680928712634:web:922ef6c83e6d01aad6af83",
-    measurementId: "G-R6Y2HC3306"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  
 
 
 ///Asignar nombre y version de la cache
