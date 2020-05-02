@@ -52,7 +52,6 @@ self.addEventListener('install', (event) => {
 
 
 
-
   self.addEventListener('fetch', (event) => {
   console.info('Event: Fetch');
 
@@ -65,6 +64,7 @@ self.addEventListener('install', (event) => {
       if (response) {
         return response;
       }
+
 
       //if request is not cached, add it to cache
       return fetch(request).then((response) => {
@@ -108,7 +108,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          if (cache !== cacheName) {     //cacheName = 'cache-v1'
+          if (cache !== CACHE_NAME) {     //cacheName = 'cache-v1'
             return caches.delete(cache); //Deleting the cache
           }
         })
