@@ -98,14 +98,12 @@ self.addEventListener('activate', (event) => {
             return caches.delete(cacheName); //Deleting the cache
           }
 
-        })
-      );
+        });
+      
     })
 
 
-  );
  ///.then(()=>{ ///Activar Cache
   	//	self.clients.claim();});
 
 });
-
