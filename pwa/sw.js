@@ -85,31 +85,6 @@ self.addEventListener('install', (event) => {
   ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
 */
 
-//Adding `activate` event listener
-self.addEventListener('activate', (event) => {
-  console.info('Event: Activate');
-  const cacheWhitelist = [CACHE_NAME];
-  //Remove old and unwanted caches
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {     //cacheName = 'cache-v1'
-            return caches.delete(cacheName); //Deleting the cache
-          }
-
-        });
-      
-    })
-
-
- ///.then(()=>{ ///Activar Cache
-  	//	self.clients.claim();});
-
-});
-
-
-
 
 
  self.addEventListener('fetch', event => {
