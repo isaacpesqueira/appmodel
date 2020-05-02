@@ -54,6 +54,7 @@ if (doCache) {
 
 
 self.addEventListener("activate", event => {
+      console.log("Event:Activate");
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys()
@@ -72,7 +73,9 @@ self.addEventListener("activate", event => {
 // When the webpage goes to fetch files, we intercept that request and serve up the matching files
 // if we have them
 self.addEventListener('fetch', function(event) {
+    console.log("Event:Fetch");
     if (doCache) {
+
       event.respondWith(
           caches.match(event.request).then(function(response) {
               return response || fetch(event.request);
