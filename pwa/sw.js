@@ -64,6 +64,10 @@ self.addEventListener("activate", event => {
             console.log('Deleting cache: ' + key)
             return caches.delete(key);
           }
+          else
+           {
+             self.clients.claim();
+           } 
         }))
       )
   );
