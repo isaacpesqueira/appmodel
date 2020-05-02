@@ -66,6 +66,7 @@ self.addEventListener("activate", event => {
           }
           else
            {
+               console.log("power");
              self.clients.claim();
            } 
         }))
