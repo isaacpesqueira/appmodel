@@ -101,15 +101,11 @@ self.addEventListener('activate', (event) => {
         })
       );
     })
-<<<<<<< HEAD
-    .then(()=>{ ///Activar Cache
-  		self.clients.claim();});
 
-  //
-=======
+
   );
  ///.then(()=>{ ///Activar Cache
   	//	self.clients.claim();});
->>>>>>> 58d0df2e66941452a2d11b5044b9bd0f8af40b03
+
 });
 
