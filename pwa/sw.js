@@ -74,8 +74,6 @@ self.addEventListener('install', (event) => {
 //Adding `activate` event listener
 
 
-
-
     self.addEventListener('activate', event => {
       console.info('Event: Activate');
   const cacheWhitelist = [CACHE_NAME];
