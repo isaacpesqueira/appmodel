@@ -98,23 +98,3 @@ self.addEventListener('install', (event) => {
  });
 
 
-
-        caches.open(cacheWhitelist)
-          .then(cache => {
-            return cache.keys()
-              .then(cacheNames => {
-                return Promise.all(
-                  cacheNames.filter(cacheName => {
-                    return cacheWhitelist.indexOf(cacheName) === -1;
-                  }).map(cacheName => {
-                    return caches.delete(cacheName);
-                  })
-                );
-              })
-              .then(() => {
-                return self.clients.claim();
-              });
-          })
-      );
-    }); 
-
