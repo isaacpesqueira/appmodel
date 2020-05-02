@@ -113,7 +113,7 @@ self.addEventListener('activate', (event) => {
 
 
  self.addEventListener('fetch', event => {
-  
+  console.log("Process Fetch");
    event.respondWith(caches.match(event.request));
 
  
@@ -147,6 +147,29 @@ self.addEventListener('activate', (event) => {
           })
       );
     }); 
+
+
+    /*
+  ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
+*/
+
+//Adding `activate` event listener
+self.addEventListener('activate', (event) => {
+  console.info('Event: Activate');
+
+  //Remove old and unwanted caches
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cache) => {
+          if (cache !== cacheName) {     //cacheName = 'cache-v1'
+            return caches.delete(cache); //Deleting the cache
+          }
+        })
+      );
+    })
+  );
+});
 
 
 
