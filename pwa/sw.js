@@ -64,6 +64,7 @@ if (doCache) {
 
 self.addEventListener("activate", event => {
       console.log("Event:Activate");
+   notifyMe();
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys()
