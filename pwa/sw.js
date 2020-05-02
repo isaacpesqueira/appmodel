@@ -15,11 +15,9 @@ var urltoCache = [
 '../assets/img/negocio.PNG',
 '../assets/img/office.jpg',
 '../assets/img/online-store.png',
-'../assets/img/online-store.png',
 '../assets/img/responsive-1622825_640.png',
 '../assets/js/script.min.js',
 
-'../precios.html',
 '../catalogo.html',
 '../contact.html',
 '../negocios.html',
@@ -103,8 +101,9 @@ self.addEventListener('activate', (event) => {
         })
       );
     })
-  );
-  //.then(()=>{ ///Activar Cache
-  	//	self.clients.claim();});
+    .then(()=>{ ///Activar Cache
+  		self.clients.claim();});
+
+  //
 });
 
