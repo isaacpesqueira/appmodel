@@ -1,6 +1,7 @@
 console.log("I am Service Worker");
 ///Asignar nombre y version de la cache
 const CACHE_NAME = 'v1_cache_appmodel_pwa';
+var doCache = false;
 
 //ficheros a cachear en la app
 var urltoCache = [
@@ -33,7 +34,7 @@ var urltoCache = [
 
 self.addEventListener('install', (event) => {
     console.info('Event: Install');
-
+if (doCache) {
     event.waitUntil(
       caches.open(CACHE_NAME)
       .then((cache) => {
@@ -48,7 +49,37 @@ self.addEventListener('install', (event) => {
         })
       })
     );
-  });
+  }});
+
+
+
+self.addEventListener("activate", event => {
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys()
+      .then(keyList =>
+        Promise.all(keyList.map(key => {
+          if (!cacheWhitelist.includes(key)) {
+            console.log('Deleting cache: ' + key)
+            return caches.delete(key);
+          }
+        }))
+      )
+  );
+});
+
+
+// When the webpage goes to fetch files, we intercept that request and serve up the matching files
+// if we have them
+self.addEventListener('fetch', function(event) {
+    if (doCache) {
+      event.respondWith(
+          caches.match(event.request).then(function(response) {
+              return response || fetch(event.request);
+          })
+      );
+    }
+});
 
 
 
@@ -81,41 +112,3 @@ self.addEventListener('install', (event) => {
   );
 });
 
-/*
-  ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
-*/
-
-
-
- //self.addEventListener('fetch', event => {
-  //console.log("Process Fetch");
-   //event.respondWith(caches.match(event.request));
-
- 
-//});
-
-
-    /*
-  ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
-*/
-
-//Adding `activate` event listener
-self.addEventListener('activate', (e) => {
-  console.info('Event: Activate');
-const cacheWhitelist = [CACHE_NAME];
-e.waitUntil(
-  caches.keys()
-  .then(cacheNames => {
-    return Promise.all(
-      cacheNames.map(cacheName)==-1)
-    {
-    return caches.delete(cacheName); 
-    }
-     })
-  );
-})
-.then(()=>{
-  self.clients.claim(); 
-})
-);
-});
