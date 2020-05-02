@@ -72,7 +72,7 @@ self.addEventListener('install', (event) => {
   ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
 */
 //Adding `activate` event listener
-
+ 
 
     self.addEventListener('activate', event => {
       console.info('Event: Activate');
