@@ -119,35 +119,6 @@ self.addEventListener('activate', (event) => {
  
 });
 
-/*
-  ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
-*/
-//Adding `activate` event listener
-
-
-    self.addEventListener('activate', event => {
-      console.info('Event: Activate');
-  const cacheWhitelist = [CACHE_NAME];
-      event.waitUntil(
-        caches.open(cacheWhitelist)
-          .then(cache => {
-            return cache.keys()
-              .then(cacheNames => {
-                return Promise.all(
-                  cacheNames.filter(cacheName => {
-                    return cacheWhitelist.indexOf(cacheName) === -1;
-                  }).map(cacheName => {
-                    return caches.delete(cacheName);
-                  })
-                );
-              })
-              .then(() => {
-                return self.clients.claim();
-              })
-          })
-      );
-    }); 
-
 
     /*
   ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
