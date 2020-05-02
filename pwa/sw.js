@@ -69,7 +69,7 @@ self.addEventListener('install', (event) => {
       //if request is not cached, add it to cache
       return fetch(request).then((response) => {
         var responseToCache = response.clone();
-        caches.open(cacheName).then((cache) => {
+        caches.open(CACHE_NAME).then((cache) => {
             cache.put(request, responseToCache).catch((err) => {
               console.warn(request.url + ': ' + err.message);
             });
