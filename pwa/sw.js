@@ -87,12 +87,12 @@ self.addEventListener('install', (event) => {
 
 
 
- self.addEventListener('fetch', event => {
-  console.log("Process Fetch");
-   event.respondWith(caches.match(event.request));
+ //self.addEventListener('fetch', event => {
+  //console.log("Process Fetch");
+   //event.respondWith(caches.match(event.request));
 
  
-});
+//});
 
 
     /*
@@ -100,22 +100,22 @@ self.addEventListener('install', (event) => {
 */
 
 //Adding `activate` event listener
-self.addEventListener('activate', (event) => {
+self.addEventListener('activate', (e) => {
   console.info('Event: Activate');
-
-  //Remove old and unwanted caches
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {     //cacheName = 'cache-v1'
-            return caches.delete(cache); //Deleting the cache
-          }
-        })
-      );
-    })
+const cacheWhitelist = [CACHE_NAME];
+e.waitUntil(
+  caches.keys()
+  .then(cacheNames => {
+    return Promise.all(
+      cacheNames.map(cacheName)==-1)
+    {
+    return caches.delete(cacheName); 
+    }
+     })
   );
+})
+.then(()=>{
+  self.clients.claim(); 
+})
+);
 });
-
-
-
