@@ -53,31 +53,18 @@ self.addEventListener('install', (event) => {
 
 
 
-  self.addEventListener('fetch', (event) => {
-  console.info('Event: Fetch');
+ self.addEventListener('fetch', event => {
+  
 
-  var request = event.request;
-
-  //Tell the browser to wait for newtwork request and respond with below
-  event.respondWith(
-    //If request is already in cache, return it
-    caches.match(request).then((response) => {
-      if (response) {
-        return response;
-      }
-
-      //if request is not cached, add it to cache
-      return fetch(request).then((response) => {
-        var responseToCache = response.clone();
-        caches.open(cacheName).then((cache) => {
-            cache.put(request, responseToCache).catch((err) => {
-              console.warn(request.url + ': ' + err.message);
-            });
-          });
-
-        return response;
-      });
-    })
+ 	event.respondWith(
+ 	caches.match(event.request)
+ 		.then(res=> {
+ 		if(res) {
+			///devuelvo los datos del cache
+ 			return res;
+ 		}
+		return fetch(event.request);
+ 		})
   );
 });
 
