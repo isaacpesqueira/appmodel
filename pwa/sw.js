@@ -66,7 +66,7 @@ self.addEventListener("activate", event => {
     
 
     var notification = new Notification("POWER ISAAC !");
-
+setTimeout(n.close.bind(n), 5000);
    }, 9000);
    i++;
    
