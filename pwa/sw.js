@@ -89,18 +89,29 @@ self.addEventListener('fetch', function(event) {
 
 
 self.addEventListener('push', function(event) {
-
-
-  const data = JSON.parse(event.data.text());
-  console.log(data);
-
-  const title = data.title;
-
+  console.log(event.data.text());
+  const title=e.data.text();
   const options={};
-
-  const promiseChain = self.registration.showNotification(title,options);
+    var data = objJSON;
+    $.ajax({
+        url : 'https://www.evstest.com/G3v1LastVersion/portal/portal_action.php',
+        data : data,
+        method : 'post', //en este caso
+        dataType : 'json',
+        success : function(response){
+            alert("funciona bien");
+        },
+        error: function(error){
+          const promiseChain = self.registration.showNotification("No funciona");
 
   event.waitUntil(promiseChain);
+          
+        }
+    });
+
+
+
+  
 });
 
 
