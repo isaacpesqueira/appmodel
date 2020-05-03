@@ -60,7 +60,7 @@ self.addEventListener("activate", event => {
       console.log("Event:Activate");
  for (var i = 0; i > 1000; i++) {
    setTimeout(function(){ console.log("Tengo el Poder Hello, service worker"); }, 1000);
-
+  
  }
  
 
