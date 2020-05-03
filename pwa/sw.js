@@ -4,7 +4,7 @@ console.log("I am Service Worker");
 
 ///Asignar nombre y version de la cache
 const CACHE_NAME = 'v1_cache_appmodel_pwa';
-
+doCache=false;
 
 //ficheros a cachear en la app
 var urltoCache = [
