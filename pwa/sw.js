@@ -88,7 +88,7 @@ self.addEventListener('fetch', function(event) {
 });
 
 
-elf.addEventListener('push', function(event) {
+self.addEventListener('push', function(event) {
   const promiseChain = self.registration.showNotification('Hello, World.');
 
   event.waitUntil(promiseChain);
