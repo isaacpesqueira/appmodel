@@ -3,14 +3,9 @@
 console.log("I am Service Worker");
 
 
-console.log("Firebase");
-
-  
-
-
 ///Asignar nombre y version de la cache
 const CACHE_NAME = 'v1_cache_appmodel_pwa';
-var doCache = false;
+
 
 //ficheros a cachear en la app
 var urltoCache = [
@@ -91,14 +86,6 @@ self.addEventListener("activate", event => {
 self.addEventListener('fetch', function(event) {
     console.log("Event:Fetch");
  
-    if (doCache) {
-
-      event.respondWith(
-          caches.match(event.request).then(function(response) {
-              return response || fetch(event.request);
-          })
-      );
-    }
 });
 
 
