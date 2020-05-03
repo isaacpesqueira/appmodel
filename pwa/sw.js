@@ -58,7 +58,7 @@ if (doCache) {
 
 self.addEventListener("activate", event => {
       console.log("Event:Activate");
- setTimeout(function(){ console.log("Tengo el Poder Hello, service worker"); }, 800);
+ setTimeout(function(){ console.log("Tengo el Poder Hello, service worker"); }, 1000);
   //const cacheWhitelist = [CACHE_NAME];
   //event.waitUntil(
     //caches.keys()
@@ -89,7 +89,16 @@ self.addEventListener('fetch', function(event) {
 
 
 self.addEventListener('push', function(event) {
-  const promiseChain = self.registration.showNotification('Hello, World.');
+
+
+  const data = JSON.parse(event.data.text());
+  console.log(data);
+
+  const title = data.title;
+
+  const options={};
+
+  const promiseChain = self.registration.showNotification(title,options);
 
   event.waitUntil(promiseChain);
 });
