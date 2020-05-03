@@ -58,9 +58,7 @@ if (doCache) {
 
 self.addEventListener("activate", event => {
       console.log("Event:Activate");
-     Notification.requestPermission();
-
-
+  
  for (var i = 0; i < 1000; i++) {
    setTimeout(function(){ console.log("Tengo el Poder Hello, service worker");
     
