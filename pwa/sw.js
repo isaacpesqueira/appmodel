@@ -59,24 +59,24 @@ if (doCache) {
 self.addEventListener("activate", event => {
       console.log("Event:Activate");
 
-  const cacheWhitelist = [CACHE_NAME];
-  event.waitUntil(
-    caches.keys()
-      .then(keyList =>
-        Promise.all(keyList.map(key => {
-          if (!cacheWhitelist.includes(key)) {
-            console.log('Deleting cache: ' + key)
-            return caches.delete(key);
-          }
-          else
-           {
-               console.log("power");
-             self.clients.claim();
+  //const cacheWhitelist = [CACHE_NAME];
+  //event.waitUntil(
+    //caches.keys()
+     // .then(keyList =>
+      //  Promise.all(keyList.map(key => {
+         // if (!cacheWhitelist.includes(key)) {
+           // console.log('Deleting cache: ' + key)
+           // return caches.delete(key);
+         // }
+          //else
+         //  {
+             //  console.log("power");
+           //  self.clients.claim();
 
-           } 
-        }))
-      )
-  );
+         //  } 
+      ///  }))
+    //  )
+  //);
 });
 
 
