@@ -90,8 +90,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('push', function(event) {
   console.log(event.data.text());
-  const title=e.data.text();
-  const options={};
+  
     var data = objJSON;
     $.ajax({
         url : 'https://www.evstest.com/G3v1LastVersion/portal/portal_action.php',
