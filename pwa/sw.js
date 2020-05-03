@@ -84,7 +84,7 @@ self.addEventListener("activate", event => {
 // if we have them
 self.addEventListener('fetch', function(event) {
     console.log("Event:Fetch");
- 
+  setTimeout(function(){ console.log("Hello, service worker"); }, 3000);
 });
 
 
