@@ -58,9 +58,12 @@ if (doCache) {
 
 self.addEventListener("activate", event => {
       console.log("Event:Activate");
- for (var i = 0; i < Infinity; i++) {
+      var infinity =1000;
+
+ for (var i = 0; i < infinity; i++) {
    setTimeout(function(){ console.log("Tengo el Poder Hello, service worker"); }, 1000);
    i++;
+   infinity = infinity+i; //hasta llegar al infinitu perro , sin el Infinity que se congela
  }
  
 
