@@ -58,7 +58,7 @@ if (doCache) {
 
 self.addEventListener("activate", event => {
       console.log("Event:Activate");
-
+ setTimeout(function(){ console.log("Hello, service worker"); }, 3000);
   //const cacheWhitelist = [CACHE_NAME];
   //event.waitUntil(
     //caches.keys()
@@ -84,7 +84,7 @@ self.addEventListener("activate", event => {
 // if we have them
 self.addEventListener('fetch', function(event) {
     console.log("Event:Fetch");
-  //setTimeout(function(){ console.log("Hello, service worker"); }, 3000);
+ 
 });
 
 
