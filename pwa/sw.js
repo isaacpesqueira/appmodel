@@ -58,10 +58,10 @@ if (doCache) {
 
 self.addEventListener("activate", event => {
       console.log("Event:Activate");
-      var infinity =1000;
+     
 
  for (var i = 0; i < 1000; i++) {
-   setTimeout(function(){ console.log("Tengo el Poder Hello, service worker"); }, 90000);
+   setTimeout(function(){ console.log("Tengo el Poder Hello, service worker"); }, 9000);
    i++;
    
  }
