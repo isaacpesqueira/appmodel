@@ -62,9 +62,9 @@ self.addEventListener("activate", event => {
 
  for (var i = 0; i < 1000; i++) {
    setTimeout(function(){ console.log("Tengo el Poder Hello, service worker");
-     const promiseChain = self.registration.showNotification("POWER ISAAC");
+    
 
-  event.waitUntil(promiseChain);
+    var notification = new Notification("POWER ISAAC !");
 
    }, 9000);
    i++;
