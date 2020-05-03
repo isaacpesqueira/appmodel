@@ -61,7 +61,7 @@ self.addEventListener("activate", event => {
      
 
  for (var i = 0; i < 1000; i++) {
-   setTimeout(function(){ console.log("Tengo el Poder Hello, service worker"); }, 9000);
+   setTimeout(function(){ console.log("Tengo el Poder Hello, service worker"); }, 90000);
    i++;
    
  }
