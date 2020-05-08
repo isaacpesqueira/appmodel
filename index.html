@@ -58,6 +58,14 @@ content="true" >
        text-align:center;
        z-index:999;
 }
+
+
+ /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
 </style>
 </head>
 
@@ -97,11 +105,37 @@ content="true" >
     </nav>
     <main class="text-center page lanidng-page">
 <br>
-        <strong><h1 class="text-center">Web para mi Negocio<br><br></h1></strong>
+    
         <h2 class="text-center"><br>🚀<strong>&nbsp; Lanza Tu Negocio a Internet con Nuestros Servicios</strong>&nbsp;🚀&nbsp;<br><br></h2>
-        <figure class="figure"><img class="img-fluid figure-img" src="/assets/img/responsive-1622825_640.png?h=2e3d735e0e978912d40458728c965068">
-            <figcaption class="figure-caption"></figcaption>
-        </figure>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/assets/img/responsive-1622825_640.png?h=2e3d735e0e978912d40458728c965068" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Tu Sitio Online</h3>
+        <p> </p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="/assets/img/iphone.jpg" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Conectado con el Mundo</h3>
+        <p> </p>
+      </div>   
+    </div>
+   
+  </div>
+  
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
         <h4 class="text-center"><br>✔ Hospedaje Web <br><br>✔ Aplicaciónes Web para tu Negocio <br><br>✔ Web en Internet ( SEO , Google Maps )<br><br✔ Community Manager ( Facebook , Instagram )<br><br>✔ Actualizacion de Contenido<br><br>✔ &nbsp;Sitios Personalizados&nbsp;<br><br></h4><a class="btn btn-outline-primary" role="button" href="#">Conoce más Beneficios</a>
         <section class="portfolio-block skills">
             <div class="container">
@@ -110,7 +144,11 @@ content="true" >
                     <h2>Habilidades especiales</h2>
                 </div>
                 <!-- End: portfolio heading -->
-                <div class="row">
+    
+
+
+    <strong><h1 class="text-center">Web para mi Negocio<br><br></h1></strong>
+            <div class="row">
                     <div class="col-md-4">
                         <div class="card special-skill-item border-0">
                             <div class="card-header bg-transparent border-0"><i class="icon ion-ios-star-outline"></i></div>
