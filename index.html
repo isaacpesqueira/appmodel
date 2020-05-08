@@ -67,9 +67,15 @@ content="true" >
   }
 
 </style>
+<script language="JavaScript"> 
+function iniciar(){ 
+   	var audio = new Audio('assets/audio/INICIO.wav');
+	audio.play();
+} 
+</script> 
 </head>
 
-<body>
+<body onload="iniciar()">
 
 <div class="btn-whatsapp">
 <a href="https://api.whatsapp.com/send?phone=19517637388" target="_blank">
