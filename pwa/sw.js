@@ -62,7 +62,7 @@ self.addEventListener("activate", event => {
  console.log("Tengo el Poder Hello, service worker");
     
 
-                        }
+                       
    
  });
  
