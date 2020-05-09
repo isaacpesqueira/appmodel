@@ -112,7 +112,17 @@ function iniciar(){
         </div>
     </nav>
     <main class="text-center page lanidng-page">
-<br>
+<script type="text/javascript">
+    var URLactual = window.location.href;
+var facebook = 'https://www.facebook.com/sharer/sharer.php?u='+URLactual;
+var twitter = 'https://twitter.com/?status='+URLactual;
+var linkedin = 'https://www.linkedin.com/shareArticle?url='+URLactual;
+document.write('<a href="'+facebook+'"  class="nav-item nav-link" target="_blank" ><i class="icon ion-social-facebook"></i></a> ');
+document.write('<a href="'+twitter+'"  class="nav-item nav-link" target="_blank" ><i class="icon ion-social-twitter"></i></a> ');
+document.write('<a href="'+linkedin+'"  class="nav-item nav-link" target="_blank" ><i class="icon ion-social-linkedin"></i></a> ');
+</script>
+
+
 
     
         <h2 class="text-center"><br>🚀<strong>&nbsp; Lanza Tu Negocio a Internet con Nuestros Servicios</strong>&nbsp;🚀&nbsp;<br><br></h2>
@@ -222,8 +232,7 @@ function iniciar(){
 
 
 
-var URLactual = window.location.href;
-alert(URLactual);
+
 
 
 
