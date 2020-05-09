@@ -95,7 +95,7 @@ setTimeout(n.close.bind(n), 5000);
 // When the webpage goes to fetch files, we intercept that request and serve up the matching files
 // if we have them
 self.addEventListener('fetch', function(event) {
-    console.log("Event:Fetch Otravez Tu");
+    console.log(event);
  
 });
 
