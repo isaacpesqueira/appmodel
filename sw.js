@@ -95,6 +95,10 @@ self.addEventListener('fetch', function(event) {
  
 });
 
+self.addEventListener('click', function(event) {
+    console.log(event);
+ 
+});
 
 
 
