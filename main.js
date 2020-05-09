@@ -26,6 +26,13 @@ const check = () => {
     throw new Error('No Push API Support!')
   }
 }
+
+
+Notification.requestPermission(function(permission){
+var notification = new Notification("Hola Mundo");
+});
+
+
 const registerServiceWorker = async () => {
   const swRegistration = await navigator.serviceWorker.register('service.js')
   return swRegistration
