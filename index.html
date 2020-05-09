@@ -112,18 +112,38 @@ function iniciar(){
         </div>
     </nav>
     <main class="text-center page lanidng-page">
+<span class="float-left">
+<button type="button" onclick="compartir()" class="btn btn-info" id="button_share">Compartir</button>
+
 <script type="text/javascript">
-    var URLactual = window.location.href;
+
+document.write('');
+
+document.write('');
+function compartir() {
+    var x = document.getElementById("button_share");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+   var URLactual = window.location.href;
 var facebook = 'https://www.facebook.com/sharer/sharer.php?u='+URLactual;
 var twitter = 'https://twitter.com/?status='+URLactual;
 var linkedin = 'https://www.linkedin.com/shareArticle?url='+URLactual;
-document.write('<span class="float-left">&nbsp; &nbsp; <p> <a href="'+facebook+'"  target="_blank" class="icon ion-social-facebook"></a> &nbsp;  &nbsp; ');
+document.write('<div id="myDIV" style="border:1px solid black;"> &nbsp; &nbsp; <p> <a href="'+facebook+'"  target="_blank" class="icon ion-social-facebook"></a> &nbsp;  &nbsp; ');
 document.write('<a href="'+twitter+'"  target="_blank" class="icon ion-social-twitter"></a> &nbsp;&nbsp;  ');
-document.write('<a href="'+linkedin+'"   target="_blank" class="icon ion-social-linkedin"></a> </p></span>  &nbsp;&nbsp;');
+document.write('<a href="'+linkedin+'"   target="_blank" class="icon ion-social-linkedin"></a> </p></span>  &nbsp;&nbsp; </div>');
+
+    }
+}
+
+
+
+ 
 </script>
 
 
-
+</span>
     
         <h2 class="text-center"><br>🚀<strong>&nbsp; Lanza Tu Negocio a Internet con Nuestros Servicios</strong>&nbsp;🚀&nbsp;<br><br></h2>
 <div id="demo" class="carousel slide" data-ride="carousel">
