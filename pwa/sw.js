@@ -1,6 +1,6 @@
 
 
-console.log(" I am Service Worker");
+console.log("I am Service Worker");
 
 ///Asignar nombre y version de la cache
 const CACHE_NAME = 'v1_cache_appmodel_pwa';
@@ -63,10 +63,9 @@ self.addEventListener("activate", event => {
    setTimeout(function(){ console.log("Tengo el Poder Hello, service worker");
     
 
-
-   i++;
+                        }
    
- }
+ });
  
 
   //const cacheWhitelist = [CACHE_NAME];
@@ -87,7 +86,7 @@ self.addEventListener("activate", event => {
       ///  }))
     //  )
   //);
-/// });
+///});
 
 
 // When the webpage goes to fetch files, we intercept that request and serve up the matching files
