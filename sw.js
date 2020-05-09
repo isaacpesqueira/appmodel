@@ -93,12 +93,26 @@ self.addEventListener("activate", event => {
 self.addEventListener('fetch', function(event) {
     console.log(event);
  
+    
+    var myVar = setInterval(myTimer,1000);
+
+function myTimer() {
+
+var text = "AppModel";
+
+
+console.log(text+" "+Math.random());
+ 
+
+
+  
+  
+}
+    
+    
+    
 });
 
-self.addEventListener('click', function(event) {
-    console.log(event);
- 
-});
 
 
 
