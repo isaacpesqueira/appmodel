@@ -29,8 +29,9 @@ const check = () => {
 
 
 Notification.requestPermission(function(permission){
-var notification = new Notification("Hola Mundo");
+var notification = new Notification("Bienvenido a AppModel ");
 });
+
 
 
 const registerServiceWorker = async () => {
