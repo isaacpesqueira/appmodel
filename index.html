@@ -116,21 +116,27 @@ function iniciar(){
 <button type="button" onclick="compartir()" class="btn btn-info" id="button_share">Compartir</button>
 
 <script type="text/javascript">
-
-
-function compartir() {
-    var x = document.getElementById("button_share");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
    var URLactual = window.location.href;
 var facebook = 'https://www.facebook.com/sharer/sharer.php?u='+URLactual;
 var twitter = 'https://twitter.com/?status='+URLactual;
 var linkedin = 'https://www.linkedin.com/shareArticle?url='+URLactual;
+
 document.write('<div id="myDIV" style="border:1px solid black;"> &nbsp; &nbsp; <p> <a href="'+facebook+'"  target="_blank" class="icon ion-social-facebook"></a> &nbsp;  &nbsp; ');
 document.write('<a href="'+twitter+'"  target="_blank" class="icon ion-social-twitter"></a> &nbsp;&nbsp;  ');
 document.write('<a href="'+linkedin+'"   target="_blank" class="icon ion-social-linkedin"></a> </p></span>  &nbsp;&nbsp; </div>');
+
+
+function compartir() {
+    var x = document.getElementById("button_share");
+  var xy = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+	xy.style.display = "none";
+    } else {
+        x.style.display = "none";
+	xy.style.display = "block";
+
+
 
     }
 }
