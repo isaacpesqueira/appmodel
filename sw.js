@@ -94,7 +94,7 @@ self.addEventListener('fetch', function(event) {
     console.log(event);
  
     
-    var myVar = setInterval(myTimer,10000);
+    var myVar = setInterval(myTimer,90000);
 
 function myTimer() {
 
