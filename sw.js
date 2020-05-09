@@ -102,15 +102,7 @@ var text = "AppModel";
 
 
 console.log(text+" "+Math.random());
- var history123 = [];
-history123.create(text+" "+Math.random(), {
-body: "How's it hangin'?",
-timeout: 4000,
-onClick: function () {
-    window.focus();
-    this.close();
- }
-});
+
 
   
   
