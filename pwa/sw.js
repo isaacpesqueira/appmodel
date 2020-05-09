@@ -63,9 +63,7 @@ self.addEventListener("activate", event => {
    setTimeout(function(){ console.log("Tengo el Poder Hello, service worker");
     
 
-    var notification = new Notification("POWER ISAAC !");
-setTimeout(n.close.bind(n), 5000);
-   }, 9000);
+
    i++;
    
  }
